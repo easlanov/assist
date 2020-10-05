@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
-	<title><%TITLE%>:<%ORDERNUMBER%></title>
+	<title><%=TITLE%>:<%=ORDERNUMBER%></title>
 	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="TEXT/HTML; CHARSET=UTF-8">
 	<META content="Mon, 06 Jan 1990 00:00:01 GMT" http-equiv="Expires">
 	<link rel="stylesheet" type="text/css" href="/template/custom/reseller_1/986142/styles/hh_card.css?=12_11_2014">
@@ -11,13 +11,13 @@
     <script src="/template/custom/reseller_1/986142/scripts/size.js"></script>
 	</head>
 <body>
-<%scripts%>
+<%=scripts%>
 
 <div style="border:0px solid blue; display:block; float:left; width:818px;">
 
 	<div id="all">
 
-	<div id="OrderInfo">Оплата заказа №<%ORDERNUMBER%> в системе электронных платежей</div>
+	<div id="OrderInfo">Оплата заказа №<%=ORDERNUMBER%> в системе электронных платежей</div>
 
 
 
@@ -56,14 +56,14 @@
 		<div class="MagLine"></div>
 				<div class="fline CVC">
 				<label>CVV / CVC</label><input type="password" id="CVC2" NAME="ACTIONPARAM_ID_18" autocomplete="off"><span>Последние три цифры<br>на полосе для подписи</span>
-				<%captcha_code%><%CaptchaCodeIMG%><%CaptchaCode%>
+				<%=captcha_code%><%=CaptchaCodeIMG%><%=CaptchaCode%>
 				</div>
 		</div>
 
 
 
 
-			<input type="hidden" id="Operation_ID" value="<%OPERATIONID%>" />
+			<input type="hidden" id="Operation_ID" value="<%=OPERATIONID%>" />
 
 
 
@@ -73,10 +73,10 @@
 
 	<div id="Bottom">
 	<div class='errormess'>
-		<%ErrorMessageInfo%>
-		<%recurrentinfo%>
+		<%=ErrorMessageInfo%>
+		<%=recurrentinfo%>
 	</div>
-	<div class="Total">К оплате: <%AMOUNTORG%> руб.</div>
+	<div class="Total">К оплате: <%=AMOUNTORG%> руб.</div>
 	<div class="button_block">
 	<input type="submit" id="button_pay 3_1" class="button_pay" name="Submit_Card_2" value="Оплатить" />
 	</div>

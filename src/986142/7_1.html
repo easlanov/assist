@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-	<title><%MERCHANTNAME%> - Оплата заказа № <%ORDERNUMBER%></title>
+	<title><%=MERCHANTNAME%> - Оплата заказа № <%=ORDERNUMBER%></title>
 	<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
 	<meta http-equiv=Expires content="Mon, 06 Jan 1990 00:00:01 GMT">
 	<link rel="stylesheet" type="text/css" href="/template/custom/reseller_1/986142/styles/hh_card.css?=12_11_2014">
@@ -21,29 +21,29 @@
 	</style>
 </head>
 <body>
-<%scripts%>
+<%=scripts%>
 
 <div class='HHLogo'><a href='http://hh.ru'><img src="/template/custom/reseller_1/986142/img/hh.logo.png" alt="" /></a></div>
 <div class='HHTitle'><h1>Оформление покупки</h1></div>
 
 <div class='HHLeft'>
 	<div id="all" class='HHOrder'>
-		<div id="OrderInfo">Оплата заказа №<%ORDERNUMBER%> в системе электронных платежей</div>
+		<div id="OrderInfo">Оплата заказа №<%=ORDERNUMBER%> в системе электронных платежей</div>
 
 
 	<form method="post" name="form1" id="form1">
 	<div class="OtherInfo" style="margin-top:35px">
-		<label style="width:180px; font-weight:normal; font-size:14px; line-height:24px; margin-left:0">Мобильный телефон </label> <%CountryPhoneCode%><%QIWIMobilePhone%>
+		<label style="width:180px; font-weight:normal; font-size:14px; line-height:24px; margin-left:0">Мобильный телефон </label> <%=CountryPhoneCode%><%=QIWIMobilePhone%>
 	</div>
 
 	</div>
 
 	<div id="Bottom">
 	<div class='errormess'>
-		<%ErrorMessageInfo%>
-		<%recurrentinfo%>
+		<%=ErrorMessageInfo%>
+		<%=recurrentinfo%>
 	</div>
-	<div class="Total">К оплате: <%AMOUNTORG%> руб.</div>
+	<div class="Total">К оплате: <%=AMOUNTORG%> руб.</div>
 	<div class="button_block">
 	<input type="submit" id="button_pay 3_1" class="button_pay" name="Submit_Card_1" value="Подтвердить" />
 

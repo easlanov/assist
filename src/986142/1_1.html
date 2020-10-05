@@ -1,37 +1,39 @@
-﻿<!DOCTYPE HTML>
+﻿<!DOCTYPE html>
 <html>
-<HEAD>
-<title><%=TITLE%>:<%ORDERNUMBER%></title>
-<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="TEXT/HTML; CHARSET=UTF-8">
-<META content="Mon, 06 Jan 1990 00:00:01 GMT" http-equiv="Expires">
-<link rel="stylesheet" media="all" href="/template/custom/reseller_1/986142/styles/style.css" />
-<script src="/template/custom/reseller_1/986142/scripts/size.js"></script>
-</HEAD>
-<%scripts%>
-
-            <body>
-                <div class="header">
-                    <a href="http://www.hh.ru" class="backlink">Вернуться на HeadHunter</a>
-                    <div class="assist_logo">Ваш платёж обрабатывается платёжной системой Assist</div>
-                </div>
-                <div class="content">
-                    <div class="payinfo">
-                        Предприятие: <%MERCHANTNAME%><br>
-						Номер заказа: <%ordernumber%>
-                    </div>
-                    <div class="board">
-                        Вы собираетесь оплатить
-                        <div class="sum">
-						<%AMOUNTORG%> <%CURRENCYORG%>
-                        </div>
-                        <form action="" method="post" name="form1" class="form__button">
-                        <%TData%>
-
-                        <div class="cards">&#160;</div>
-                        <input type="submit" name="Submit_Card_1" value="Перейти к оплате" />
-                        </form>
-                    </div>
-                </div>
-                <div class="footer">&#160;</div>
-            </body>
-        </html>
+  <head>
+    <title><%=TITLE%>:<%=ORDERNUMBER%></title>
+    <meta http-equiv="CONTENT-TYPE" content="TEXT/HTML; CHARSET=UTF-8" />
+    <meta content="Mon, 06 Jan 1990 00:00:01 GMT" http-equiv="Expires" />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="/template/custom/reseller_1/986142/styles/style.css"
+    />
+    <script src="/template/custom/reseller_1/986142/scripts/size.js"></script>
+  </head>
+  <%=scripts%>
+  <body>
+    <div class="header">
+      <a href="http://www.hh.ru" class="backlink">Вернуться на HeadHunter</a>
+      <div class="assist_logo">
+        Ваш платёж обрабатывается платёжной системой Assist
+      </div>
+    </div>
+    <div class="content">
+      <div class="payinfo">
+        Предприятие: <%=MERCHANTNAME%><br />
+        Номер заказа: <%=ordernumber%>
+      </div>
+      <div class="board">
+        Вы собираетесь оплатить
+        <div class="sum"><%=AMOUNTORG%> <%=CURRENCYORG%></div>
+        <form action="" method="post" name="form1" class="form__button">
+          <%=TData%>
+          <div class="cards">&#160;</div>
+          <input type="submit" name="Submit_Card_1" value="Перейти к оплате" />
+        </form>
+      </div>
+    </div>
+    <div class="footer">&#160;</div>
+  </body>
+</html>
