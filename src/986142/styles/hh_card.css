@@ -1,0 +1,605 @@
+/* v. 27.11.2014.1 */
+body, html {
+	font-family:Arial,​sans-serif;
+	background-color: #FFFFFF;
+	font-size:12px;
+	border:0;
+	margin:0; padding:0;
+    position: relative;
+}
+
+body:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+div ,p,span, label, select, input {display:block; float:left; margin:0; padding:0;}
+
+#all {border:0; background:#f5f4f1; padding:0; width:818px; min-height:480px; display:block; float:left; clear:left}
+#OrderInfo {display:block; border:0; text-indent:18px; font-size:18px; font-weight:bold; margin-top:22px}
+#CardBlock, #CardBlockBack {
+   border:2px solid #70b200; width:420px; height:260px; border-radius:12px;
+   background: #fff;
+	-webkit-box-shadow: 2px 2px 10px 0px rgba(50, 50, 50, 0.28);
+	-moz-box-shadow:    2px 2px 10px 0px rgba(50, 50, 50, 0.28);
+	box-shadow:         2px 2px 10px 0px rgba(50, 50, 50, 0.28);
+   position:absolute;
+
+}
+#CardBlock {margin-top:99px; margin-left:60px; z-index:2}
+#CardBlockBack {border:2px solid #b1d27a; z-index:1; margin-left:260px; margin-top:140px;}
+.MagLine {height:57px; width:420px; margin-top:40px; background:#c9caca; float:left; margin:0; margin-top:40px;}
+
+label {border:0; padding:0; margin-left:25px; font-size:12px; height:29px; font-weight:bold; vertical-align:top; line-height:12px; width:121px;}
+label.error{padding-top:6px;  border:0; height:27px; width:258px; font-size:11px; margin-left:130px; color:red; display:block; font-weight:normal}
+
+label.forRadioBtn{
+   margin: 0px;
+   width: 80%;
+   display: inline;
+}
+label i {font-size:11px; color:#999999; font-style:normal; line-height:18px; font-weight:bold}
+
+.fline {clear:left; height:48px; margin:0; padding:0; margin-top:35px; border:0;  margin-bottom:1px; overflow:hidden; border:0}
+.fline1 {clear:left; height:16px; margin:0; padding:0; margin-top:30px; border:0;  margin-bottom:1px; overflow:hidden}
+.fline2 {margin-top:16px;  margin-bottom:1px; overflow:hidden}
+
+.tData {margin-left:25px}
+.tData .form_name  {float:left; height:40px; margin:0; overflow:hidden; border:0px solid green; width:108px; margin-right:50px}
+.tData .form_pole1  {float:left; height:40px; margin:0; width:283px; border:0px solid red}
+.tData .form_pole1 input {width:283px}
+
+.fline span, label.error {
+font-size:11px; color:red; margin-top:0px;
+margin-left:145px;
+}
+
+.fline.CVC{
+   border:0;
+   width:167px;
+   float:right;
+   margin-top:25px;
+   height:130px;
+}
+
+.fline.CVC label{
+   border:0;
+   width:167px;
+   float:right;
+   margin-bottom:12px;
+   height:12px;
+}
+
+.fline.CVC label.error{
+   display:none !important
+}
+
+.fline.CVC span{
+   border:0;
+   width:167px;
+   float:right;
+   height:18px;
+   color:#999999;
+   margin-top:12px;
+   display:block;
+}
+
+.fline.mBig label.error{
+   border:0;
+}
+
+.fline.mLast{
+   margin-top: 0px;
+   margin-bottom: 0px;
+}
+input[type="text"],input[type="password"] {
+   width:240px;
+   height:27px;
+   font-size:12px;
+   line-height:28px;
+   border: 1px solid #c0c0c0;
+   color:#666;
+   text-transform:uppercase;
+   text-indent:10px;
+   outline: none;
+   	-webkit-border-radius: 3px;
+	-moz-border-radius:    3px;
+	border-radius:         3px;
+}
+
+#CVC2 {width:110px }
+
+#Cardholder {
+   background-color: #fff;
+   line-height:27px;
+}
+
+.mNoMargin input{
+   margin-left: 35px;
+}
+.mInlineInput{
+   height: 70px;
+   margin-bottom: 30px;
+}
+.mInlineInput input[type="text"]{
+   display: inline;
+   width: 67px;
+   float: none;
+   margin: 0px 10px;
+}
+.mInlineInput input[type="radio"] {
+   margin-top: 6px !important;
+   position: relative;
+   border: none;
+}
+.info{
+   position: absolute;
+   text-align: center;
+   width: 123px !important;
+   line-height: 15px !important;
+   left: -75px;
+   margin-top: 5px !important;
+}
+
+.ResultPhone {float:left; width:100%; display:block; margin:20px; margin-top:0px; margin-left:60px; font-size:18px; height:20px;}
+.OtherInfo{font-size:14px; line-height:16px; margin:25px; margin-bottom:12px; margin-left:60px;}
+
+#Cardholder.valid{background:#fff}
+#Cardholder:focus{border:1px solid #333333}
+#CardNumber:focus{border:1px solid #333333}
+#CardNumber.errorfield:focus{border:1px solid red}
+#CVC2:focus{border:1px solid #333;}
+#CVC2.valid, #CVC2:focus{color:#333333}
+#CardNumber.valid, #CardNumber:focus {background:#fff}
+#ExpireMonth {margin-right:11px}
+select {width:69px; height:27px; font-size:12px; text-indent:2px; border:1px solid #c0c0c0; margin-right:7px;}
+
+#CBLeft {border:0; width:250px; height:600px; font-size:12px; line-height:16px; color:#333333; float:left; margin:0; margin-left:35px}
+#CBLeft img {display:block; margin-bottom:10px;}
+#Bottom {width:818px; margin:0; border:0; display:block; float:left; margin-top:35px;}
+#Bottom .Total {display:block; float:right; clear:right; margin-right:20px; font-size:24px; border-top:1px solid #999; font-weight:bold; padding-top:24px;}
+
+div.LinkBlock a {border:0 !important; text-decoration:none; margin-left:23px; color:#009bd7; font-weight:bold; margin-top:23px; display:block; float:left}
+
+#SafetyMoreT {margin-bottom:13px;}
+#CBLeft span,  #CBLeft a {
+	text-decoration: none;
+	color:#009bd7; font-weight:bold;
+}
+#CBLeft span.dotted, #CBLeft a.dotted {
+	cursor:pointer;
+}
+
+#CBLeft span.dotted i {text-decoration:none; font-style: normal;
+    background: -moz-linear-gradient(left, #009bd7, #009bd7 50%, transparent 50%);
+    background: -ms-linear-gradient(left, #009bd7, #009bd7 50%, transparent 50%);
+    background: -o-linear-gradient(left, #009bd7, #009bd7 50%, transparent 50%);
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(#009bd7), color-stop(0.5, #009bd7), color-stop(0.5, transparent));
+    background: -webkit-linear-gradient(left, #009bd7, #009bd7 50%, transparent 50%);
+    background: linear-gradient(left, #009bd7, #009bd7 50%, transparent 50%);
+    background-size: 2px 1px;
+    background-repeat: repeat-x;
+    background-position: 0 100%;
+	margin:0; padding:0
+}
+
+p.AboutAssist {line-height:18px; margin-bottom:20px;}
+
+/* QIWI */
+.HHLogo {border-bottom:1px solid #edece8; margin-left:110px; display:block; float:left; width:1104px; clear:left; margin-top:12px}
+.HHLogo img {border:0}
+.HHTitle {margin-left:90px; display:block; float:left; width:1104px; height:90px; text-indent:18px; clear:left}
+.HHTitle h1{font-size:32px}
+.HHLeft {border:0; display:block; float:left; width:818px; margin-left:90px; clear:left}
+#all.HHOrder {height:188px !important; min-height:188px; border:0}
+#all.HHOrder #OrderInfo {margin-top:35px; margin-left:2px}
+p.CBLeftP {display:block; font-size:12px; line-height:16px; margin-bottom:22px}
+#CBLeft.CBLeftRight {margin-left:35px; border:0; width:250px}
+
+/* end QIWI */
+
+input[type="radio"]{
+   width:16px; height:20px;
+   margin-right:10px;
+   border:0;
+   margin-left:35px;
+   margin-top: -1px;
+}
+
+#empData  {font-weight: normal; line-height:16px; margin-bottom:20px; display:none; margin-top:385px; width:600px; margin-left:60px; margin-right:20px; border:0}
+.Title1 {font-size: 12px; font-weight: bold; display:block;
+    background: -moz-linear-gradient(left, #009bd7, #009bd7 50%, transparent 50%);
+    background: -ms-linear-gradient(left, #009bd7, #009bd7 50%, transparent 50%);
+    background: -o-linear-gradient(left, #009bd7, #009bd7 50%, transparent 50%);
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(#009bd7), color-stop(0.5, #009bd7), color-stop(0.5, transparent));
+    background: -webkit-linear-gradient(left, #009bd7, #009bd7 50%, transparent 50%);
+    background: linear-gradient(left, #009bd7, #009bd7 50%, transparent 50%);
+    background-size: 2px 1px;
+    background-repeat: repeat-x;
+    background-position: 0 100%;
+	margin:0; padding:0;
+	margin-bottom:20px;
+	cursor:pointer;
+}
+
+#empData a  {
+    background: -moz-linear-gradient(left, #009bd7, #009bd7 50%, transparent 50%);
+    background: -ms-linear-gradient(left, #009bd7, #009bd7 50%, transparent 50%);
+    background: -o-linear-gradient(left, #009bd7, #009bd7 50%, transparent 50%);
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(#009bd7), color-stop(0.5, #009bd7), color-stop(0.5, transparent));
+    background: -webkit-linear-gradient(left, #009bd7, #009bd7 50%, transparent 50%);
+    background: linear-gradient(left, #009bd7, #009bd7 50%, transparent 50%);
+    background-size: 2px 1px;
+    background-repeat: repeat-x;
+    background-position: 0 100%;
+	margin:0; padding:0;
+	cursor:pointer;
+	color:#009bd7;
+	font-style:normal
+}
+
+#OneClickNotice {display:none; width:600px; height:315px; position:absolute; z-index:300; border:1px solid #ccc; background:#fff; border-radius:3px; margin-left:120px; margin-top:132px;
+   	-webkit-box-shadow: 2px 2px 10px 0px rgba(50, 50, 50, 0.28);
+	-moz-box-shadow:    2px 2px 10px 0px rgba(50, 50, 50, 0.28);
+	box-shadow:         2px 2px 10px 0px rgba(50, 50, 50, 0.28);
+	-webkit-border-radius: 6px;
+	-moz-border-radius:    6px;
+	border-radius:         6px;
+	font-size:14px; line-height:18px;
+}
+#OneClickNotice span {display:block; margin:32px; width:520px;}
+#OneClickNotice ul {margin-top:0px; width:500px}
+#OneClickNotice li {list-style-type:none; list-style-image:url(/template/custom/reseller_1/986142/img/dash.png); margin-bottom:12px; margin-left:-16px; padding-left:6px}
+
+#empData span{
+display:block;
+float:left;
+width:600px;
+font-size:14px;
+}
+
+
+  /* стиль для уголка */
+#OneClickNotice:after, #OneClickNotice:before {
+    left: 400px;
+    top: 500px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+}
+
+#OneClickNotice:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-top-color: white;
+    border-width: 12px;
+    margin-top: -186px;
+}
+
+#OneClickNotice:before {
+    border-color: rgba(255, 255, 255, 0);
+    border-top-color: #999;
+    border-width: 12px;
+    margin-top: -185px;
+}
+/* --- */
+
+#empData1 .title {font-size: 14px; font-weight: bold;}
+#empData1 .smalltext { font-size: 13px; margin:35px; margin-top:0; line-height: 17px;}
+#empData1 .fline {height:20px}
+
+.button_block {display:block; float:left; width:798px; margin-top:28px; margin-right:0px;}
+.button_pay.disabled {
+background: #d8f19f; /* Old browsers */
+background: -moz-linear-gradient(top,  #d8f19f 0%, #c5e99f 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d8f19f), color-stop(100%,#c5e99f)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #d8f19f 0%,#c5e99f 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #d8f19f 0%,#c5e99f 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #d8f19f 0%,#c5e99f 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #d8f19f 0%,#c5e99f 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8f19f', endColorstr='#c5e99f',GradientType=0 ); /* IE6-9 */
+color:#fff;
+cursor:default;
+line-height:1px;
+}
+
+.button_remove,
+.button_pay {
+background: #88c300;
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzg4YzMwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM2MGEyMDMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  #88c300 0%, #60a203 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#88c300), color-stop(100%,#60a203));
+background: -webkit-linear-gradient(top,  #88c300 0%,#60a203 100%);
+background: -o-linear-gradient(top,  #88c300 0%,#60a203 100%);
+background: -ms-linear-gradient(top,  #88c300 0%,#60a203 100%);
+background: linear-gradient(to bottom,  #88c300 0%,#60a203 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#88c300', endColorstr='#60a203',GradientType=0 );
+   width:149px; height:44px;
+   border:2px solid #f2f2f2;
+   color:#fff;
+   text-transform:none;
+   font-size:18px;
+   line-height:14px;
+   display:block;
+   float:right;
+   	-webkit-border-radius: 6px;
+	-moz-border-radius:    6px;
+	border-radius:         6px;
+   text-indent:0; text-align:center;
+   cursor:pointer;
+   padding-bottom:2px
+}
+.button_remove{
+   background-image: url(/template/custom/reseller_1/986142/img/button_remove.png);
+}
+select{
+   background: #fff;
+   width: 109px;
+   padding-top: 1px;
+   padding-right:4px;
+   padding-bottom:2px;
+   font-size: 12px;
+   line-height: 1;
+   border: 1px solid #c0c0c0;
+	-webkit-border-radius: 3px;
+	-moz-border-radius:    3px;
+	border-radius:         3px;
+   height: 27px;
+   color:#58595b;
+   font-weight:normal;
+}
+select:focus {border:1px solid #333333}
+
+input.valid {border: 1px solid #c0c0c0; color:#000}
+input.error {color:#000}
+input.process {color:#000}
+span.errormessage {display:none}
+input.errorfield {border:1px solid red}
+
+.whitefon {margin-top:-20px; margin-bottom:20px; color:red}
+
+/* OneClick New */
+.fline.mBig #CVC2 {width:60px}
+#CustomersCardsD {display:none}
+input.MakeMain {width:auto !important; height:auto !important; padding:0; background:transparent; margin-top:2px}
+#ContInside0 .form_name {height:30px}
+#ContInside0 .form_pole1 {height:30px}
+
+#MyCards {width:255px}
+
+#DelCard {margin-left:120px;}
+/*
+#UseCard, #UseCardOne {font-size:12px; text-decoration:none; display:block; float:left; margin-left:20px;  height:12px; margin-top:6px; margin-bottom:12px; color:#336699;}
+*/
+
+#empDataCardType, #empDataCardNumber, #empDataExpireDate, #empDataCardholder {margin:0; padding:0;}
+
+#empDataU {
+   display:none; position:absolute; width: 175px; height:auto; margin-left:76px; margin-top:340px;
+   z-index:1000;
+   	-webkit-box-shadow: 2px 2px 10px 0px rgba(50, 50, 50, 0.28);
+	-moz-box-shadow:    2px 2px 10px 0px rgba(50, 50, 50, 0.28);
+	box-shadow:         2px 2px 10px 0px rgba(50, 50, 50, 0.28);
+	-webkit-border-radius: 6px;
+	-moz-border-radius:    6px;
+	border-radius:         6px;
+	padding-top:12px;
+	padding-bottom:8px;
+   }
+
+#empDataU {
+    background: #fff;
+    border: 1px solid #c0c0c0;
+    /* padding: 20px;  поля вокруг содержимого */
+    width: 160px;
+    -webkit-border-radius: 6px;
+	-moz-border-radius:    6px;
+	border-radius:         6px;
+}
+  /* стиль для уголка */
+#empDataU:after, #empDataU:before {
+    left: 70px;
+    top: 160px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+}
+
+#empDataU:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: white;
+    border-width: 12px;
+    margin-top: -184px;
+}
+
+#empDataU:before {
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #999;
+    border-width: 12px;
+    margin-top: -185px;
+}
+
+#loading {display:block; width:1150px; height:635px; border:0; position:absolute; top:0; left:0; z-index:1000; background:#fff; padding:0}
+#loading  div {font-size:16px; display:block; float:left; margin-top:250px; width:1150px; height:470px; border:0; text-align:center; background:#fff}
+
+   .whitefon {border:0; margin-top:0; margin-left:70px; line-height:18px; font-size:14px; margin-top:-16px}
+   .errormess {border:0; height:40px; width:400px}
+
+	#selCard {display:block; float:left; width:168px; height:26px; overflow:hidden; border:0; margin-bottom:4px;}
+	#selCard a {cursor:pointer; color:#009ad7; display:block; height:26px; margin:0; padding:0; text-indent:18px; line-height:28px; width:160px; outline:none}
+	#selCard a:hover {background:#f4f4f4; color:#000}
+	a.newcard {color:#91c339 !important; display:block; background:#fff;}
+
+#empData label {font-weight:normal; font-size:14px; margin-left:0}
+#click1,#click2 {width:500px}
+
+.checkbox {
+	vertical-align: top;
+	width: 10px;
+	height: 10px;
+	margin: 0 3px 0 0;
+}
+.checkbox + label {
+	cursor: pointer;
+}
+.checkbox:not(checked) {
+	position: absolute;
+	opacity: 0;
+}
+.checkbox:not(checked) + label {
+	position: relative;
+	padding: 0 0 0 25px;
+}
+.checkbox:not(checked) + label:before {
+	content: '';
+	position: absolute;
+	top: -1px;
+	left: 0;
+	width: 12px;
+	height: 12px;
+	border: 1px solid #c0c0c0;
+	border-radius: 50%;
+	background:#fff;
+}
+.checkbox:not(checked) + label:after {
+	content: '';
+	position: absolute;
+	top: 3px;
+	left: 4px;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background:#e2e2e2;
+	opacity: 0.11;
+	transition: all .2s;
+}
+.checkbox:checked + label:after {
+	background:#444444;
+	opacity: 0.7;
+}
+.checkbox:focus + label:before {
+}
+
+input[type='reset'] {
+	padding: 12px 15px;
+	border: none;
+	border-radius: 5px;
+	background: #CDD1DA;
+	color: #FFF;
+	cursor: pointer;
+	font-size: 15px;
+}
+input[type='reset']:active {
+	background: #BDC0CC;
+}
+input[type='reset']:focus {
+	outline: none;
+	box-shadow: 0 0 0 3px rgba(255,255,0,.5);
+}
+
+.prosper-button,
+.prosper-button:visited {
+     width: auto !important;
+	 font-family: Arial, sans-serif !important;
+	 color: #333;
+     font-size: 13px;
+     line-height: 25px;
+     text-align: center;
+     vertical-align: baseline;
+     text-shadow: 0 1px 0 #fff;
+     text-decoration: none;
+     white-space: nowrap;
+	text-transform:none;
+	 display:block;
+	 margin-top:32px;
+	 text-indent: 0;
+     display: inline-block;
+     height: 25px;
+     padding: 0 20px 0;
+     border: 1px solid #d3d3d3;
+     border-radius: 3px;
+     outline: none;
+     box-shadow: inset 0 -1px 1px #fff;
+     background: #f1f1f2;
+     background: linear-gradient(to bottom, #fdfdfd, #f1f1f2);
+     cursor: pointer;
+         user-select: none;
+
+}
+
+
+input.prosper-button,
+button.prosper-button {
+     line-height: 25px;
+     vertical-align: baseline;
+     height: 27px;
+}
+
+
+
+     .prosper-button:hover {
+		color: #333;
+         border: 1px solid #b8b8b8;
+         background: #f8f7f9;
+         background: linear-gradient(to bottom, #fefefe, #f8f7f9);
+
+     }
+
+
+
+     .prosper-button:focus {
+         border: 1px solid #2bace7;
+         outline: none !important;
+         box-shadow: 0 0 2px #2bace7;
+         background: #f9f9f9;
+         background: linear-gradient(to bottom, #fefefe, #f9f9f9);
+
+     }
+
+
+
+     .prosper-button:active {
+         border: 1px solid #aeaeae;
+         box-shadow: inset 0 0 2px #aeaeae;
+         background: #e1e1e1;
+
+     }
+
+
+
+     .prosper-button::-moz-focus-inner {    /* Firefox */
+         border: 0;
+         padding: 0;
+
+     }
+
+
+
+     @media all and (min-width:0px) {    /* Opera */
+         noindex:-o-prefocus, .prosper-button:focus {
+             outline-offset: 2px !important;
+             outline: 1px solid #fff !important;
+
+         }
+
+     }
+
+
+
+     .prosper-button:disabled,
+     .prosper-button:disabled:hover,
+     .prosper-button:disabled:focus,
+     .prosper-button:disabled:active {
+         color: #b8b8b8;
+         border: 1px solid #ededed;
+         text-shadow: none;
+         box-shadow: inset 0 -1px 1px #fff;
+         background: #f9f9f9;
+         background: linear-gradient(to top, #fefefe, #f9f9f9);
+         cursor: default;
+         opacity: 0.6;
+     }

@@ -1,0 +1,25 @@
+{
+  "name": "assist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/easlanov/assist.git"
+  },
+  "author": "Eugene Aslanov <eugasl@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/easlanov/assist/issues"
+  },
+  "homepage": "https://github.com/easlanov/assist#readme",
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^4.5.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  }
+}

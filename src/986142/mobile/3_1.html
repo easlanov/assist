@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<META http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0">
+	<title><%MERCHANTNAME%>:<%ORDERNUMBER%></title>
+	<link rel="StyleSheet" href="/template/custom/reseller_1/986142/mobile/styles/reset.css" type="text/css" media="screen">
+	<link rel="StyleSheet" href="/template/custom/reseller_1/986142/mobile/styles/mobilen.css" type="text/css" media="screen">
+	<script type="text/javascript" src="/template/custom/reseller_1/986142/mobile/scripts/jquery-1.8.1.min.js"></script>
+	<script type="text/javascript" src="/template/custom/reseller_1/986142/mobile/scripts/jquery.maskedinput-1.1.3.js"></script>
+	<script type="text/javascript" src="/template/custom/reseller_1/986142/mobile/scripts/jquery.validate.js"></script>
+    <script type="text/javascript" src="/template/custom/reseller_1/986142/mobile/scripts/size.js"></script>
+<script type="text/javascript">
+jQuery.validator.setDefaults({
+	debug:false,
+	success: "valid"
+});
+</script>
+<script>
+$(document).ready(function(){
+	$("#form1").validate({
+  				rules: {
+							// номер карты
+							ACTIONPARAM_ID_17: {
+							required: true,
+							rangelength: [12,19],
+							digits: true,
+							},
+							// владелец карты
+							ACTIONPARAM_ID_16: {
+							required: true,
+							cardholder: true
+							},
+							// CVC2
+							ACTIONPARAM_ID_18: {
+							required: false,
+							digits: true,
+							rangelength: [3,4]
+							},
+
+						},
+  				messages:
+						{
+
+							// номер карты
+							ACTIONPARAM_ID_17 : {
+							required:"Обязательное поле",
+							digits:"Только цифры",
+							rangelength: $.validator.format("Введите от 12 до 19 цифр")
+							},
+							// владелец карты
+							ACTIONPARAM_ID_16 : {
+							required:"Обязательное поле",
+							cardholder: $.validator.format("Разрешается использовать латинские буквы, символ пробела, точку и цифры.")
+							},
+							// CVC2
+							ACTIONPARAM_ID_18 : {
+							digits:"Только цифры!",
+							rangelength: $.validator.format("3 или 4 цифры")
+							},
+
+						}
+
+
+
+			});
+  });
+</script>
+</head>
+<%scripts%>
+<body>
+	<div id="wrap">
+		<div id="header"><div class="Logo"><img src="/template/custom/reseller_1/986142/mobile/img/lmob.png"></div><div class="FullVersion"><%WWWLINK%></div></div>
+			<div id="content">
+				<div class="Info4">
+								<span>
+								Предприятие:   <%MERCHANTNAME%><br>
+								Номер заказа:  <%ORDERNUMBER%><br>
+								Сумма платежа: <%AMOUNTORG%> <%CURRENCYORG%>
+								</span>
+				</div>
+				<div class="Info3">
+				<img src="/template/custom/reseller_1/986142/mobile/img/card.png" align="left" width="80">
+					<span>Данные о банковской карте</span>
+				</div>
+				<div class="Form">
+					<FORM method=post autocomplete="off" name="form1" id="form1">
+					<span>Введите номер карты</span>
+					<%CardNumber%>
+					<span>Срок действия карты:</span>
+					<%EXPIREMONTH%> <%EXPIREYEAR%>
+					<span>Введите имя владельца карты</span>
+					<%Cardholder%>
+					<span>Проверочный номер карты (CVC2/CVV2):</span>
+					<%CVC2%>
+					<input type="Submit" id="button" name="Submit_Card_2" value="Оплатить" />
+					</form>
+				</div>
+			</div>
+	</div>
+</body>
+</html>

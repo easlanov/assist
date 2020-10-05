@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<META http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0">
+	<title><%MERCHANTNAME%>:<%ORDERNUMBER%></title>
+	<link rel="StyleSheet" href="/template/custom/reseller_1/986142/mobile/styles/reset.css" type="text/css" media="screen">
+	<link rel="StyleSheet" href="/template/custom/reseller_1/986142/mobile/styles/mobilen.css" type="text/css" media="screen">
+    <script type="text/javascript" src="/template/custom/reseller_1/986142/mobile/scripts/size.js"></script>
+</head>
+<%scripts%>
+<script src="/template/scripts/linkedselect.js" type="text/javascript" ></script>
+<body>
+	<div id="wrap">
+		<div id="header"><div class="Logo"><img src="/template/custom/reseller_1/986142/mobile/img/lmob.png"></div><div class="FullVersion"><a href="#">www версия</a></div></div>
+			<div id="content">
+		<div class="Info4">
+			<span>
+			Merchant Name:   <%MERCHANTNAME%><br>
+			Order Number:  <%ORDERNUMBER%><br>
+			Total: <%AMOUNTORG%> <%CURRENCYORG%>
+			</span>
+		</div>
+				<div class="Info3">
+					<span>Personal data</span>
+				</div>
+				<div class="Form">
+					<FORM method=post autocomplete="off" name="form1" id="form1" action='<%URLPOST%>'>
+					<span><%tdata%></span>
+					<%button_confirm%>
+					</form>
+				</div>
+			</div>
+			<%RegionSyncList%>
+	</div>
+</body>
+</html>

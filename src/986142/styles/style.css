@@ -1,0 +1,303 @@
+/* ------------------------------- reset --------------------------------- */
+
+html, body, div, span, table, tr, td, hr, br, p, em, strong, small, h1, h2, h3, h4, h5, h6, img,
+dl, dt, dd, ol, ul, li, form, label, a {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+a {
+    cursor: pointer;
+    text-decoration: underline;
+    outline: none;
+}
+    a:hover {
+        color: #c00;
+    }
+button, input, select, textarea {
+    margin: 0;
+    width: auto;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    font-size: 12px;
+}
+input[type=button], input[type=reset], input[type=submit], input[type=image], button {
+    cursor: pointer;
+    overflow: visible;
+    vertical-align: middle;
+}
+table {
+    border-collapse: collapse;
+    empty-cells: show;
+    border-spacing: 0;
+}
+    td {
+        vertical-align: top;
+    }
+hr {
+    line-height: 0;
+    font-size: 0;
+    height: 0;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #eee;
+}
+
+/* ------------------------------- layout --------------------------------- */
+html {
+    overflow-y: scroll;
+}
+html, body {
+    height: 100%;
+    min-height: 100%;
+    background: #fff;
+    font-size: 14px;
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    color: #000;
+    line-height: 21px;
+    min-width: 800px;
+}
+    .g-hidden {
+        display: none;
+    }
+    .hidden {
+        height: 0;
+        overflow: hidden;
+        line-height:0
+    }
+
+/* ------------------------------- head --------------------------------- */
+
+.header {
+    max-width: 940px;
+    padding: 33px 0 28px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 100;
+    font-size: 12px;
+    overflow: hidden;
+}
+    .backlink {
+        float: left;
+        height: 27px;
+        line-height: 27px;
+        padding-right: 10px;
+        padding-left: 20px;
+        font-size: 12px;
+        text-decoration: none;
+        color: #999;
+        border-radius: 5px;
+        margin-top: 3px;
+    }
+        .backlink:before {
+            background: url(/template/custom/reseller_1/986142/img/backlink.png) no-repeat 0 0;
+            display: block;
+            height: 100%;
+            width: 11px;
+            content: '';
+            position: absolute;
+            left: 0;
+        }
+        .backlink:hover {
+            color: #000;
+            background: #e6e6e6;
+            background: -moz-linear-gradient(center top , #fafafa, #e6e6e6) repeat scroll 0 0 transparent;
+            background: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#e6e6e6));
+            background: -o-linear-gradient(#fafafa,#e6e6e6);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#e6e6e6');
+        }
+    .assist_logo {
+        float: right;
+        width: 196px;
+        background: url(/template/custom/reseller_1/986142/img/assist.logo.png) 0 4px no-repeat;
+        vertical-align: middle;
+        color: #999;
+        padding: 38px 0 0 46px;
+        font-size: 11px;
+        line-height: 20px;
+        letter-spacing: .7px;
+    }
+
+/* ------------------------------- footer --------------------------------- */
+
+.footer {
+    max-width: 940px;
+    height: 140px;
+    background: url(/template/custom/reseller_1/986142/img/visa.mastercard.png) center 40px no-repeat;
+    margin: 0 auto;
+}
+
+/* ------------------------------- content --------------------------------- */
+
+.content {
+    width: 616px;
+    margin: 0 auto;
+    min-height: 200px;
+    border: 1px solid #cecece;
+    background: url(/template/custom/reseller_1/986142/img/hh.logo.png) 42px 42px no-repeat;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    -moz-box-shadow: 0 0 10px #cecece;
+    -webkit-box-shadow: 0 0 10px #cecece;
+    box-shadow: 0 0 10px #cecece;
+}
+    .payinfo {
+        padding: 56px 20px 25px 240px;
+        line-height: 24px;
+        min-height: 65px;
+    }
+        .m-payinfo_success {
+            color: #6aac00;
+            font-weight: bold;
+        }
+        .m-payinfo_error {
+            color: #c00;
+            font-weight: bold;
+        }
+
+    .board {
+        margin: 0 54px 0 216px;
+        padding: 16px 22px;
+        background-color: #f0f0f0;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        font-size: 12px;
+        margin-bottom: 50px;
+    }
+        .form__button {
+            padding-top: 22px;
+            position: relative;
+        }
+            .cards {
+                position: absolute;
+                top: 24px;
+                left: -196px;
+                height: 20px;
+                background: url(/template/custom/reseller_1/986142/img/cards.logo.png) 0 0 no-repeat;
+                width: 100px;
+            }
+            .form__button input {
+                font-size: 16px;
+            }
+        .sum {
+            color: #6aac00;
+            font-size: 32px;
+            white-space: nowrap;
+            line-height: 44px;
+            padding-bottom: 12px;
+            letter-spacing: .5px;
+        }
+
+    .hint {
+        width: 150px;
+        height: 500px;
+        padding: 66px 22px 0 40px;
+        font-size: 12px;
+        line-height: 18px;
+    }
+        .hint p {
+            padding-bottom: 8px;
+            color: #999;
+        }
+        .hint strong {
+            font-weight: normal;
+            color: #c00;
+        }
+        .hint a {
+            color: #999;
+        }
+
+    .form {
+        width: 325px;
+        padding: 14px 0 0 26px;
+    }
+        .form h6 {
+            font-size: 14px;
+            padding-bottom: 12px;
+        }
+        .form label {
+            display: block;
+            font-size: 12px;
+            padding: 2px 0 10px;
+        }
+        .form .b-captcha {
+            margin-bottom: 2px;
+        }
+        .form .label {
+            display: block;
+        }
+        .form .m-wrong_font {
+            color: #f00;
+            font-size: 12px;
+            font-style: italic;
+            margin-left: 10px;
+            display: inline;
+        }
+        .form .m-wrong_border {
+            border: 2px solid #f00;
+        }
+        .form .board {
+            margin: 20px 0 134px -26px;
+        }
+        .form .form__button {
+            padding: 0 0 0 5px;
+        }
+        .form .sum {
+            line-height: 32px;
+            padding: 0 0 14px 5px;
+        }
+
+    .table {
+        margin: 24px 0 0 20px;
+        width: 560px;
+    }
+        .table th {
+            background: #f0ffd8;
+            color: #6aac00;
+            padding: 9px 20px;
+            text-align: left;
+        }
+        .table td {
+            border-top: 1px solid #eee;
+            padding: 9px 20px;
+            width: 50%;
+        }
+
+    .subfooter {
+        background-color: #e5f5fb;
+        margin-top: 30px;
+        padding: 22px 40px 18px;
+        -webkit-border-radius: 0 0 15px 15px;
+        -moz-border-radius: 0 0 15px 15px;
+        border-radius: 0 0 15px 15px;
+        overflow: hidden;
+    }
+        .subfooter input {
+            border: none;
+            float: right;
+            font-size: 12px;
+            color: #a7b7bd;
+            background: url(/template/custom/reseller_1/986142/img/print.png) left center no-repeat;
+            padding-left: 20px;
+            margin-top: 2px;
+            text-decoration: underline;
+        }
+            .subfooter input:hover {
+                color: #c00 !important;
+            }
+        .subfooter input:first-child {
+            float: left;
+            font-size: 18px;
+            font-weight: bold;
+            color: #009cd5;
+            background: none;
+            padding: 0;
+            margin: 0;
+        }

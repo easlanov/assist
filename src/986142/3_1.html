@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title><%MERCHANTNAME%> - Оплата заказа № <%ORDERNUMBER%></title>
+	<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+	<meta http-equiv=Expires content="Mon, 06 Jan 1990 00:00:01 GMT">
+	<link rel="stylesheet" type="text/css" href="/template/custom/reseller_1/986142/styles/hh_card.css?=12_11_2014">
+	<script src="/template/custom/reseller_1/986142/scripts/jquery-1.11.0.min.js"></script>
+	<script src="/template/custom/reseller_1/986142/scripts/jquery.validate.js"></script>
+	<script src="/template/custom/reseller_1/986142/scripts/jquery.maskedinput-1.3.1.js"></script>
+	<script type="text/javascript" src="/template2/reseller_1/scripts/js_oneclick.js"></script>
+	<script src="/template/custom/reseller_1/986142/scripts/paybycard.js"></script>
+	<script src="/template/custom/reseller_1/986142/scripts/scripts.js"></script>
+    <script src="/template/custom/reseller_1/986142/scripts/size.js"></script>
+	<%afsscripts%>
+</head>
+<body>
+<%scripts%>
+<div style="border:0; display:block; float:left; width:818px;">
+	<div id="all">
+	<form method="post" name="form1" id="form1">
+		<div id="OrderInfo">Оплата заказа №<%ORDERNUMBER%> в системе электронных платежей</div>
+			<div id="CardBlock">
+				<div class="fline">
+					<label>Номер карты<br><i>Card Number</i></label>
+					<%CardNumber%>
+				</div>
+				<div class="fline fline2">
+					<label>Срок действия<br><i>Valid thru</i></label>
+					<%ExpireMonth%>
+					<i style="display:block; margin-right:11px; margin-top:6px; float:left">/</i>
+					<%ExpireYear%>
+				</div>
+				<div class="fline fline2"><label>Держатель карты<br><i>Cardholder Name</i></label>
+					<%Cardholder%>
+				</div>
+			</div>
+			<div id="empDataU"></div>
+		<div id="CardBlockBack">
+		<div class="MagLine"></div>
+				<div class="fline CVC">
+				<label>CVV / CVC</label><input type="password" id="CVC2" NAME="ACTIONPARAM_ID_18" autocomplete="off"><span>Последние три цифры<br>на полосе для подписи</span>
+				<%captcha_code%><%CaptchaCodeIMG%><%CaptchaCode%>
+				</div>
+		</div>
+	<input type="hidden" id="Operation_ID" value="<%OPERATIONID%>" />
+	<div id="empData" style="display:none">
+			<span style="margin-bottom:20px; width:600px;">Мы можем запомнить вашу банковскую карту, чтобы вам в следующий раз было проще оплачивать услуги – это удобно и абсолютно безопасно.
+			<a onClick="$('#OneClickNotice').fadeToggle()" id="SwithNotice">Посмотрите подробнее</a>.</span>
+			<input class='checkbox' type='radio' NAME='oneclickdecline' id='myradio1' VALUE='0' checked="checked" > <label for="myradio1" id="click1">Запомнить мою карту - хочу стать участником программы &laquo;One-Click&raquo;</label>
+			<input class='checkbox' type='radio' NAME='oneclickdecline' id='myradio2' VALUE='1'> <label for="myradio2" id="click2">Не запоминать мою карту</label>
+			</div>
+
+	</div>
+	<div id="Bottom">
+	<div class='errormess'>
+	<%ErrorMessageInfo%>
+	<%recurrentinfo%>
+	</div>
+	<div class="Total">К оплате: <%AMOUNTORG%> руб.</div>
+	<div class="button_block">
+	<input type="submit" id="button_pay" class="button_pay" name="Submit_Card_2" value="Оплатить" />
+
+	</div>
+	</div>
+
+	</div>
+
+	</form>
+
+		<div id="CBLeft">
+		<img src="/template/custom/reseller_1/986142/img/Visa_mastercard_secure_opacity50.png"  alt="">
+		<p class="AboutAssist">Сервис предоставлен провайдером электронных платежей ASSIST. Комиссия не взимается. Введенные данные будут храниться в зашифрованном виде.</p>
+		<span id="SafetyMoreT" class="dotted"><i>Подробнее про безопасность платежей</i></span>
+		<div id="SafetyMore" style="display:none; font-size:11px; line-height:16px; padding-top:12px">
+Оплата услуг пластиковыми картами на нашем сайте осуществляется через платежную систему <a href="http://www.assist.ru" target="_blank" style="display:inline; margin:0; padding:0; float:none">ASSIST</a>. <br>
+В системе ASSIST безопасность платежей обеспечивается использованием SSL протокола для передачи конфиденциальной информации от клиента на сервер системы ASSIST для дальнейшей обработки.<br>
+Дальнейшая передача информации осуществляется по закрытым банковским сетям.<br>
+Обработка полученных конфиденциальных данных клиента (реквизиты карты, регистрационные данные и т.д.) производится в процессинговом центре. Таким образом, никто, даже продавец, не может получить персональные
+и банковские данные клиента.
+		</div>
+		</div>
+
+
+<div id="OneClickNotice">
+<span>
+<b>Программа OneClick</b><br><br>
+Соглашаясь с участием в программе "OneClick", вы подтверждаете, что прочитали и принимаете следующие условия:<br><br>
+<ul>
+<li>Данные Вашей карты будут сохранены в зашифрованном виде сертифицированным по международному стандарту PCI DSS провайдером электронных платежей ASSIST.<br>
+<li>Проверочный код на обратной стороне карты (CVC2/CVV2/4DBC) не сохраняется, его нужно будет вводить при каждом последующем платеже.<br>
+<li>При необходимости, во время выбора способа оплаты при последующих покупках, вы сможете удалить данные Вашей карты.<br>
+</ul>
+</span>
+</div>
+
+<script>
+$(function() {
+
+			$('#SafetyMoreT').click(function(event) {
+				$('#SafetyMore').slideToggle();
+			});
+			$('.Title1').click(function(event) {
+				$('#SafetyMore').slideToggle();
+
+			});
+		});
+		$('#UseCard').click(function(event) {
+				$('#empDataU').Toggle();
+			});
+
+		$(document).click(function (event) {
+				if ($(event.target).closest('#empDataU').length == 0 && $(event.target).attr('id') != 'UseCard') {
+				$('#empDataU').hide();
+
+		}
+});
+
+$(document).click( function(event){
+	if ($(event.target).closest('#OneClickNotice').length == 0 && $(event.target).attr('id') == 'SwithNotice')
+	return;
+	$("#OneClickNotice").hide();
+
+});
+
+</script>
+</body>
+</html>

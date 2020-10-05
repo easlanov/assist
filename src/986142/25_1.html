@@ -1,0 +1,52 @@
+﻿<!DOCTYPE HTML>
+<html>
+  <head>
+    <title><%MERCHANTNAME%> - Оплата заказа № <%ORDERNUMBER%></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT" />
+	<script src="/template/custom/reseller_1/986142/scripts/jquery-1.11.0.min.js"></script>
+    <script src="/template/custom/reseller_1/986142/scripts/size.js"></script>
+    <link rel="stylesheet" type="text/css" href="/template/custom/reseller_1/986142/styles/hh_card.css" />
+	<%refresh%>
+<style>
+.fline1{font-size:14px; padding:0; margin: 0 0 18px 38px; border:0px solid red; display:block; float:left; width:800px; line-height:14px;}
+.fline1 label {font-weight:normal; font-size:14px; padding:0; width:230px; margin:0; line-height:14px;}
+.red {display:block; font-size:14px; color:red; width:800px; font-weight:normal; margin-left:38px; margin-top:24px;}
+#ResultGreen {display:none; color:green}
+</style>
+
+ </head>
+  <body>
+  <div id="loading" style="display:block"><div><img src="/template/custom/reseller_1/986142/img/ajax-loader.gif"><br><br>Идет обработка запроса. Пожалуйста, подождите...</div></div>
+    <div style="border:0; display:none; float:left; width:1150px;">
+      <div id="all" style="background:#fff;">
+        <div id="OrderInfo" style="text-indent:0; margin-bottom:24px;">
+        <span id="OpState"><%OPSTATE%></span>
+        <div class="red">
+		<%ERROR_MESSAGE%>
+        <%ERROR_RECOMENDATION%>
+		<span id="ResultGreen">Зачисление денег на счет произойдет в течение 15 минут.</span>
+		</div>
+
+
+		</div>
+
+        <div class="fline1">
+        <label>Сумма платежа:</label> <%AMOUNTORG%> руб. </div>
+        <div class="fline1">
+        <label>ФИО покупателя:</label> <%CUSTOMERNAME%></div>
+        <div class="fline1">
+        <label>Дата платежа:</label> <%OPDATEBEGIN%></div>
+        <div class="fline1">
+        <label>Платежное средство:</label> <%MEANNUMBER%> <%MEANTYPENAME%></div>
+
+      </div>
+    </div>
+<script>
+			$(document).ready(function() {
+				var urlTop = '<%URL_RETURN_UNIVERSAL%>';
+				top.location.href = urlTop;
+            });
+</script>
+  </body>
+</html>

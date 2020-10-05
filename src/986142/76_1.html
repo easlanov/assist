@@ -1,0 +1,121 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<title><%TITLE%>:<%ORDERNUMBER%></title>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="TEXT/HTML; CHARSET=UTF-8">
+	<META content="Mon, 06 Jan 1990 00:00:01 GMT" http-equiv="Expires">
+	<link rel="stylesheet" type="text/css" href="/template/custom/reseller_1/986142/styles/hh_card.css?=12_11_2014">
+	<script src="/template/custom/reseller_1/986142/scripts/jquery-1.8.3.min.js"></script>
+	<script src="/template3/reseller_1/scripts/oneclickselect.js"></script>
+	<script src="/template/custom/reseller_1/986142/scripts/jquery.validate.js"></script>
+    <script src="/template/custom/reseller_1/986142/scripts/size.js"></script>
+	</head>
+<body>
+<%scripts%>
+
+<div style="border:0px solid blue; display:block; float:left; width:818px;">
+
+	<div id="all">
+
+	<div id="OrderInfo">Оплата заказа №<%ORDERNUMBER%> в системе электронных платежей</div>
+
+
+
+		<div id="CardBlock">
+		<form method="post" name="form1" id="form1">
+
+				<div class="fline1">
+					<label>Тип карты</label>
+					<div id="empDataCardType"></div>
+				</div>
+
+				<div class="fline1">
+					<label>Номер карты</label>
+					<div id="empDataCardNumber"></div>
+				</div>
+
+				<div class="fline1">
+					<label>Срок действия</label>
+					<div id="empDataExpireDate"></div>
+				</div>
+
+				<div class="fline1"><label>Держатель карты</label>
+					<div id="empDataCardholder"></div>
+				</div>
+
+
+				<div class="LinkBlock"><a href="#" id="UseCard">Оплатить другой картой</a> <a href="#" id="DelCard" onclick="onCardsDelete();">Удалить эту карту</a></div>
+
+		</div>
+
+		<div id="empDataU"></div>
+		<div id="bgrarr"></div>
+
+
+		<div id="CardBlockBack">
+		<div class="MagLine"></div>
+				<div class="fline CVC">
+				<label>CVV / CVC</label><input type="password" id="CVC2" NAME="ACTIONPARAM_ID_18" autocomplete="off"><span>Последние три цифры<br>на полосе для подписи</span>
+				<%captcha_code%><%CaptchaCodeIMG%><%CaptchaCode%>
+				</div>
+		</div>
+
+
+
+
+			<input type="hidden" id="Operation_ID" value="<%OPERATIONID%>" />
+
+
+
+
+
+	</div>
+
+	<div id="Bottom">
+	<div class='errormess'>
+		<%ErrorMessageInfo%>
+		<%recurrentinfo%>
+	</div>
+	<div class="Total">К оплате: <%AMOUNTORG%> руб.</div>
+	<div class="button_block">
+	<input type="submit" id="button_pay 3_1" class="button_pay" name="Submit_Card_2" value="Оплатить" />
+	</div>
+	</div>
+
+
+	</div>
+
+	</form>
+
+		<div id="CBLeft">
+		<img src="/template/custom/reseller_1/986142/img/Visa_mastercard_secure_opacity50.png"  alt="">
+		<p class="AboutAssist">Сервис предоставлен провайдером электронных платежей ASSIST. Комиссия не взимается. Введенные данные будут храниться в зашифрованном виде.</p>
+		<span id="SafetyMoreT" class="dotted"><i>Подробнее про безопасность платежей</i></span>
+		<div id="SafetyMore" style="display:none; font-size:11px; line-height:16px; padding-top:12px">
+Оплата услуг пластиковыми картами на нашем сайте осуществляется через платежную систему <a href="http://www.assist.ru" target="_blank" style="display:inline; margin:0; padding:0; float:none">ASSIST</a>. <br>
+В системе ASSIST безопасность платежей обеспечивается использованием SSL протокола для передачи конфиденциальной информации от клиента на сервер системы ASSIST для дальнейшей обработки.<br>
+Дальнейшая передача информации осуществляется по закрытым банковским сетям.<br>
+Обработка полученных конфиденциальных данных клиента (реквизиты карты, регистрационные данные и т.д.) производится в процессинговом центре. Таким образом, никто, даже продавец, не может получить персональные
+и банковские данные клиента.
+		</div>
+		</div>
+    <script>
+		$(function() {
+			$('#SafetyMoreT').click(function(event) {
+				$('#SafetyMore').slideToggle();
+			});
+		});
+
+		$(function() {
+			$('#UseCard').click(function(event) {
+				$('#empDataU').fadeToggle();
+			});
+			$(document).click(function (event) {
+					if ($(event.target).closest('#empDataU').length == 0 && $(event.target).attr('id') != 'UseCard') {
+					$('#empDataU').hide();
+				}
+			});
+		});
+    </script>
+</body>
+</html>
