@@ -7,14 +7,16 @@ const fs = require("fs");
 
 const MERCHANT_ID = 986142;
 
-const STYLES_PATH = `/template/custom/reseller_1/${MERCHANT_ID}/styles/`;
-const STYLES_PATH_MOBILE = `/template/custom/reseller_1/${MERCHANT_ID}/mobile/styles/`;
+const ASSIST_ROOT_PATH = `template/custom/reseller_1/${MERCHANT_ID}`;
 
-const JS_PATH = `/template/custom/reseller_1/${MERCHANT_ID}/scripts/`;
-const JS_PATH_MOBILE = `/template/custom/reseller_1/${MERCHANT_ID}/mobile/scripts/`;
+const STYLES_PATH = `${ASSIST_ROOT_PATH}/styles/`;
+const STYLES_PATH_MOBILE = `${ASSIST_ROOT_PATH}/mobile/styles/`;
 
-const IMAGES_PATH = `/template/custom/reseller_1/${MERCHANT_ID}/img/`;
-const IMAGES_PATH_MOBILE = `/template/custom/reseller_1/${MERCHANT_ID}/mobile/img/`;
+const JS_PATH = `${ASSIST_ROOT_PATH}/scripts/`;
+const JS_PATH_MOBILE = `${ASSIST_ROOT_PATH}/mobile/scripts/`;
+
+const IMAGES_PATH = `${ASSIST_ROOT_PATH}/img/`;
+const IMAGES_PATH_MOBILE = `${ASSIST_ROOT_PATH}/mobile/img/`;
 
 const isDev = process.env.NODE_ENV === "development";
 const isProd = !isDev;
@@ -43,8 +45,8 @@ const assistHtmlWebpackPluginOptions = (templateName, isMobile = false) => {
 
   return {
     filename: isMobile
-      ? `${MERCHANT_ID}/mobile/${templateName}.html`
-      : `${MERCHANT_ID}/${templateName}.html`,
+      ? `${ASSIST_ROOT_PATH}/mobile/${templateName}.html`
+      : `${ASSIST_ROOT_PATH}/${templateName}.html`,
     template: isMobile
       ? `${MERCHANT_ID}/mobile/${templateName}.html`
       : `${MERCHANT_ID}/${templateName}.html`,
