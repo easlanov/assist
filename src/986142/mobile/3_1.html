@@ -3,7 +3,7 @@
 <head>
 	<META http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0">
-	<title><%MERCHANTNAME%>:<%ORDERNUMBER%></title>
+	<title><%=MERCHANTNAME%>:<%=ORDERNUMBER%></title>
 	<link rel="StyleSheet" href="/template/custom/reseller_1/986142/mobile/styles/reset.css" type="text/css" media="screen">
 	<link rel="StyleSheet" href="/template/custom/reseller_1/986142/mobile/styles/mobilen.css" type="text/css" media="screen">
 	<script type="text/javascript" src="/template/custom/reseller_1/986142/mobile/scripts/jquery-1.8.1.min.js"></script>
@@ -67,16 +67,16 @@ $(document).ready(function(){
   });
 </script>
 </head>
-<%scripts%>
+<%=scripts%>
 <body>
 	<div id="wrap">
-		<div id="header"><div class="Logo"><img src="/template/custom/reseller_1/986142/mobile/img/lmob.png"></div><div class="FullVersion"><%WWWLINK%></div></div>
+		<div id="header"><div class="Logo"><img src="/template/custom/reseller_1/986142/mobile/img/lmob.png"></div><div class="FullVersion"><%=WWWLINK%></div></div>
 			<div id="content">
 				<div class="Info4">
 								<span>
-								Предприятие:   <%MERCHANTNAME%><br>
-								Номер заказа:  <%ORDERNUMBER%><br>
-								Сумма платежа: <%AMOUNTORG%> <%CURRENCYORG%>
+								Предприятие:   <%=MERCHANTNAME%><br>
+								Номер заказа:  <%=ORDERNUMBER%><br>
+								Сумма платежа: <%=AMOUNTORG%> <%=CURRENCYORG%>
 								</span>
 				</div>
 				<div class="Info3">
@@ -86,13 +86,13 @@ $(document).ready(function(){
 				<div class="Form">
 					<FORM method=post autocomplete="off" name="form1" id="form1">
 					<span>Введите номер карты</span>
-					<%CardNumber%>
+					<%=CardNumber%>
 					<span>Срок действия карты:</span>
-					<%EXPIREMONTH%> <%EXPIREYEAR%>
+					<%=EXPIREMONTH%> <%=EXPIREYEAR%>
 					<span>Введите имя владельца карты</span>
-					<%Cardholder%>
+					<%=Cardholder%>
 					<span>Проверочный номер карты (CVC2/CVV2):</span>
-					<%CVC2%>
+					<%=CVC2%>
 					<input type="Submit" id="button" name="Submit_Card_2" value="Оплатить" />
 					</form>
 				</div>
