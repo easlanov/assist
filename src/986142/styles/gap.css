@@ -1,0 +1,95 @@
+.bloko-gap {
+  margin: 0;
+}
+/* Средний вариант страницы: 12 колонок, от 1020px до 1339px (вариант по умолчанию) */
+.bloko-gap_top,
+.bloko-gap_m-top {
+  margin-top: 25px;
+}
+.bloko-gap_right,
+.bloko-gap_m-right {
+  margin-right: 20px;
+}
+.bloko-gap_bottom,
+.bloko-gap_m-bottom {
+  margin-bottom: 25px;
+}
+.bloko-gap_left,
+.bloko-gap_m-left {
+  margin-left: 20px;
+}
+/* Узкий вариант страницы до 1019px */
+@media (max-width: 1019px) {
+  .s-friendly .bloko-gap,
+  .xs-friendly .bloko-gap {
+    margin: 0;
+  }
+  .s-friendly .bloko-gap_top,
+  .xs-friendly .bloko-gap_top,
+  .s-friendly .bloko-gap_s-top,
+  .xs-friendly .bloko-gap_s-top {
+    margin-top: 25px;
+  }
+  .s-friendly .bloko-gap_right,
+  .xs-friendly .bloko-gap_right,
+  .s-friendly .bloko-gap_s-right,
+  .xs-friendly .bloko-gap_s-right {
+    margin-right: 20px;
+  }
+  .s-friendly .bloko-gap_bottom,
+  .xs-friendly .bloko-gap_bottom,
+  .s-friendly .bloko-gap_s-bottom,
+  .xs-friendly .bloko-gap_s-bottom {
+    margin-bottom: 25px;
+  }
+  .s-friendly .bloko-gap_left,
+  .xs-friendly .bloko-gap_left,
+  .s-friendly .bloko-gap_s-left,
+  .xs-friendly .bloko-gap_s-left {
+    margin-left: 20px;
+  }
+}
+/* Вариант страницы для мобильных устройств до 699px */
+@media (max-width: 699px) {
+  .xs-friendly .bloko-gap {
+    margin: 0;
+  }
+  .xs-friendly .bloko-gap_top,
+  .xs-friendly .bloko-gap_xs-top {
+    margin-top: 25px;
+  }
+  .xs-friendly .bloko-gap_right,
+  .xs-friendly .bloko-gap_xs-right {
+    margin-right: 20px;
+  }
+  .xs-friendly .bloko-gap_bottom,
+  .xs-friendly .bloko-gap_xs-bottom {
+    margin-bottom: 25px;
+  }
+  .xs-friendly .bloko-gap_left,
+  .xs-friendly .bloko-gap_xs-left {
+    margin-left: 20px;
+  }
+}
+/* Широкий вариант страницы от 1340px */
+@media (min-width: 1340px) {
+  .bloko-gap {
+    margin: 0;
+  }
+  .bloko-gap_top,
+  .bloko-gap_l-top {
+    margin-top: 25px;
+  }
+  .bloko-gap_right,
+  .bloko-gap_l-right {
+    margin-right: 20px;
+  }
+  .bloko-gap_bottom,
+  .bloko-gap_l-bottom {
+    margin-bottom: 25px;
+  }
+  .bloko-gap_left,
+  .bloko-gap_l-left {
+    margin-left: 20px;
+  }
+}

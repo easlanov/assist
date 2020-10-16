@@ -1,0 +1,32 @@
+.light-page-footer {
+  color: #9a9a9a;
+  text-align: center;
+  padding: 50px 20px 0;
+}
+.light-page-footer__copyright {
+  font-size: 12px;
+  line-height: 20px;
+  padding: 0 0 20px;
+  opacity: 0.5;
+}
+.light-page_promo .light-page-footer__copyright {
+  color: #ddd;
+}
+.light-page-footer__counters {
+  position: absolute;
+  left: -10000px;
+  top: -10000px;
+}
+@media (max-width: 699px) {
+  padding: 0 20px;
+  .light-page_promo .light-page-footer__copyright,
+  .light-page-footer__copyright {
+    padding: 20px 0;
+    background-color: #f8f8f8;
+    color: inherit;
+    text-align: center;
+  }
+}
+.light-page-footer-signup {
+  color: #ccc;
+}

@@ -1,0 +1,81 @@
+@keyframes abstract-link-loading {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -5px;
+  }
+}
+.supernova-logo-wrapper:focus {
+  box-shadow: 0 0 2px 2px #609fcf;
+}
+.supernova-logo {
+  display: block;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.supernova-logo_hh-ru {
+  background-image: url('../img/logos/svg/hh.ru.svg?v=11032019');
+  height: 50px;
+  width: 50px;
+}
+@media (max-width: 1019px) {
+  .s-friendly .supernova-logo_hh-ru {
+    height: 42px;
+    width: 42px;
+  }
+}
+.supernova-logo_hh-ua {
+  background-image: url('../img/logos/svg/hh.ua.svg?v=25032020');
+  width: 72px;
+  height: 39px;
+}
+.supernova-logo_hh-ua.supernova-logo_inversed {
+  background-image: url('../img/logos/svg/hh.ua-inversed.svg?v=25032020');
+}
+.supernova-logo_hh-uz {
+  background-image: url('../img/logos/svg/hh.uz.svg?v=11032019');
+  width: 65px;
+  height: 35px;
+}
+.supernova-logo_hh-uz.supernova-logo_inversed {
+  background-image: url('../img/logos/svg/hh.uz-inversed.svg?v=11032019');
+}
+.supernova-logo_headhunter-ge {
+  background-image: url('../img/logos/svg/headhunter.ge.svg?v=11032019');
+  width: 65px;
+  height: 35px;
+}
+.supernova-logo_headhunter-ge.supernova-logo_inversed {
+  background-image: url('../img/logos/svg/headhunter.ge-inversed.svg?v=11032019');
+}
+.supernova-logo_headhunter-kg {
+  background-image: url('../img/logos/svg/headhunter.kg.svg?v=11032019');
+  width: 65px;
+  height: 35px;
+}
+.supernova-logo_headhunter-kg.supernova-logo_inversed {
+  background-image: url('../img/logos/svg/headhunter.kg-inversed.svg?v=11032019');
+}
+.supernova-logo_headhunter-com-kz {
+  background-image: url('../img/logos/svg/hh.kz.svg?v=11032019');
+  width: 65px;
+  height: 35px;
+}
+.supernova-logo_headhunter-com-kz.supernova-logo_inversed {
+  background-image: url('../img/logos/svg/hh.kz-inversed.svg?v=11032019');
+}
+.supernova-logo_jobs-day-az {
+  background-image: url('../img/logos/svg/hh.ru.svg?v=11032019');
+  height: 50px;
+  width: 50px;
+}
+.supernova-logo_jobs-tut-by {
+  background-image: url('../img/logos/svg/jobs.tut.by.svg?v=11032019');
+  width: 81px;
+  height: 28px;
+}
+.supernova-logo_jobs-tut-by.supernova-logo_inversed {
+  background-image: url('../img/logos/svg/jobs.tut.by-inversed.svg?v=15012020');
+}

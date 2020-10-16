@@ -1,5 +1,12 @@
 @import 'page.css';
+@import 'hh_page.css';
+@import 'header.css';
 @import 'column.css';
+@import 'gap.css';
+@import 'supernova-logo.css';
+@import 'payment-path.css';
+@import 'bloko-header.css';
+@import 'hh-footer.css';
 
 /* ------------------------------- reset --------------------------------- */
 

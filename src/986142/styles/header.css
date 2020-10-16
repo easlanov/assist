@@ -1,0 +1,41 @@
+.light-page-header .light-page-header__img {
+  display: inline-block;
+}
+.light-page-header .light-page-header__title {
+  display: none;
+}
+.s-friendly .light-page-header,
+.xs-friendly .light-page-header {
+  margin-left: 0;
+}
+@media (max-width: 699px) {
+  .xs-friendly .light-page-header {
+    position: relative;
+    height: 48px;
+    background-color: #151515;
+    margin: 0 -15px;
+  }
+  .xs-friendly .light-page-header::after {
+    content: '.';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    overflow: hidden;
+  }
+  .xs-friendly .light-page-header__img {
+    display: none;
+  }
+  .xs-friendly .light-page-header__logo {
+    display: block;
+    margin: 0 auto;
+    width: 48px;
+    height: 48px;
+    background-image: url('../../../../../logos/svg/hh.ru-small.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .xs-friendly .light-page-header_tutby .light-page-header__logo {
+    background-image: url('../../../../../logos/svg/jobs.tut.by.mobile.svg');
+  }
+}
