@@ -13,27 +13,49 @@
   </head>
   <%=scripts%>
   <body>
-    <div class="header">
-      <a href="http://www.hh.ru" class="backlink">Вернуться на HeadHunter</a>
-      <div class="assist_logo">
-        Ваш платёж обрабатывается платёжной системой Assist
+    <div class="page">
+      <div class="columns-wrapper">
+        <div class="column column_xs-4 column_s-2 column_m-2 column_l-4">
+          <div
+            class="bloko-gap bloko-gap_s-top bloko-gap_m-top bloko-gap_l-top"
+          >
+            <div class="light-page-header">
+              <a class="light-page-header__logo" href="/">
+                <span class="light-page-header__img">
+                  <span class="supernova-logo supernova-logo_hh-ru"></span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <div class="header">
+        <a href="http://www.hh.ru" class="backlink">Вернуться на HeadHunter</a>
+        <div class="assist_logo">
+          Ваш платёж обрабатывается платёжной системой Assist
+        </div>
+      </div>
+      <div class="content">
+        <div class="payinfo">
+          Предприятие: <%=MERCHANTNAME%><br />
+          Номер заказа: <%=ordernumber%>
+        </div>
+        <div class="board">
+          Вы собираетесь оплатить
+          <div class="sum"><%=AMOUNTORG%> <%=CURRENCYORG%></div>
+          <form action="" method="post" name="form1" class="form__button">
+            <%=TData%>
+            <div class="cards">&#160;</div>
+            <input
+              type="submit"
+              name="Submit_Card_1"
+              value="Перейти к оплате"
+            />
+          </form>
+        </div>
+      </div>
+      <div class="footer">&#160;</div>
     </div>
-    <div class="content">
-      <div class="payinfo">
-        Предприятие: <%=MERCHANTNAME%><br />
-        Номер заказа: <%=ordernumber%>
-      </div>
-      <div class="board">
-        Вы собираетесь оплатить
-        <div class="sum"><%=AMOUNTORG%> <%=CURRENCYORG%></div>
-        <form action="" method="post" name="form1" class="form__button">
-          <%=TData%>
-          <div class="cards">&#160;</div>
-          <input type="submit" name="Submit_Card_1" value="Перейти к оплате" />
-        </form>
-      </div>
-    </div>
-    <div class="footer">&#160;</div>
   </body>
 </html>

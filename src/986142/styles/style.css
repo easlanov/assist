@@ -1,3 +1,6 @@
+@import 'page.css';
+@import 'column.css';
+
 /* ------------------------------- reset --------------------------------- */
 
 html, body, div, span, table, tr, td, hr, br, p, em, strong, small, h1, h2, h3, h4, h5, h6, img,
