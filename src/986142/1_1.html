@@ -49,51 +49,49 @@
             </li>
           </ul>
         </div>
-      </div>
 
-      <div
-        class="bloko-column bloko-column_xs-4 bloko-column_s-8 bloko-column_m-12 bloko-column_l-16 bloko-column_container"
-      >
-        <div class="header">
-          <a href="http://www.hh.ru" class="backlink"
-            >Вернуться на HeadHunter</a
-          >
-          <div class="assist_logo">
-            Ваш платёж обрабатывается платёжной системой Assist
+        <div
+          class="bloko-column bloko-column_xs-4 bloko-column_s-8 bloko-column_m-12 bloko-column_l-16 bloko-column_container"
+        >
+          <div class="header">
+            <a href="http://www.hh.ru" class="backlink"
+              >Вернуться на HeadHunter</a
+            >
+            <div class="assist_logo">
+              Ваш платёж обрабатывается платёжной системой Assist
+            </div>
+          </div>
+          <div class="content">
+            <div class="payinfo">
+              Предприятие: <%=MERCHANTNAME%><br />
+              Номер заказа: <%=ordernumber%>
+            </div>
+            <div class="board">
+              Вы собираетесь оплатить
+              <div class="sum"><%=AMOUNTORG%> <%=CURRENCYORG%></div>
+              <form action="" method="post" name="form1" class="form__button">
+                <%=TData%>
+                <div class="cards">&#160;</div>
+                <input
+                  type="submit"
+                  name="Submit_Card_1"
+                  value="Перейти к оплате"
+                />
+              </form>
+            </div>
           </div>
         </div>
-        <div class="content">
-          <div class="payinfo">
-            Предприятие: <%=MERCHANTNAME%><br />
-            Номер заказа: <%=ordernumber%>
-          </div>
-          <div class="board">
-            Вы собираетесь оплатить
-            <div class="sum"><%=AMOUNTORG%> <%=CURRENCYORG%></div>
-            <form action="" method="post" name="form1" class="form__button">
-              <%=TData%>
-              <div class="cards">&#160;</div>
-              <input
-                type="submit"
-                name="Submit_Card_1"
-                value="Перейти к оплате"
-              />
-            </form>
+
+        <div
+          class="bloko-column bloko-column_xs-4 bloko-column_s-8 bloko-column_m-12 bloko-column_l-16"
+        >
+          <div class="light-page-footer">
+            <div class="light-page-footer__copyright" data-qa="copyright">
+              © 2020 Группа компаний HeadHunter
+            </div>
           </div>
         </div>
       </div>
-
-      <div
-        class="bloko-column bloko-column_xs-4 bloko-column_s-8 bloko-column_m-12 bloko-column_l-16"
-      >
-        <div class="light-page-footer">
-          <div class="light-page-footer__copyright" data-qa="copyright">
-            © 2020 Группа компаний HeadHunter
-          </div>
-        </div>
-      </div>
-
-      <!-- <div class="footer">&#160;</div> -->
     </div>
   </body>
 </html>
