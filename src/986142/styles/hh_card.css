@@ -1,20 +1,5 @@
 /* v. 27.11.2014.1 */
-body, html {
-	font-family:Arial,​sans-serif;
-	background-color: #FFFFFF;
-	font-size:12px;
-	border:0;
-	margin:0; padding:0;
-    position: relative;
-}
-
-body:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-div ,p,span, label, select, input {display:block; float:left; margin:0; padding:0;}
+#all p, #all span, #all label, #all input, #all select {display:block; float:left; margin:0; padding:0;}
 
 #all {border:0; background:#f5f4f1; padding:0; width:818px; min-height:480px; display:block; float:left; clear:left}
 #OrderInfo {display:block; border:0; text-indent:18px; font-size:18px; font-weight:bold; margin-top:22px}
@@ -27,19 +12,19 @@ div ,p,span, label, select, input {display:block; float:left; margin:0; padding:
    position:absolute;
 
 }
-#CardBlock {margin-top:99px; margin-left:60px; z-index:2}
-#CardBlockBack {border:2px solid #b1d27a; z-index:1; margin-left:260px; margin-top:140px;}
+#CardBlock {margin-top:40px; margin-left:60px; z-index:2}
+#CardBlockBack {border:2px solid #b1d27a; z-index:1; margin-left:260px; margin-top:100px;}
 .MagLine {height:57px; width:420px; margin-top:40px; background:#c9caca; float:left; margin:0; margin-top:40px;}
 
-label {border:0; padding:0; margin-left:25px; font-size:12px; height:29px; font-weight:bold; vertical-align:top; line-height:12px; width:121px;}
-label.error{padding-top:6px;  border:0; height:27px; width:258px; font-size:11px; margin-left:130px; color:red; display:block; font-weight:normal}
+#all label {border:0; padding:0; margin-left:25px; font-size:12px; height:29px; font-weight:bold; vertical-align:top; line-height:12px; width:121px;}
+#all label.error{padding-top:6px;  border:0; height:27px; width:258px; font-size:11px; margin-left:130px; color:red; display:block; font-weight:normal}
 
-label.forRadioBtn{
+#all label.forRadioBtn{
    margin: 0px;
    width: 80%;
    display: inline;
 }
-label i {font-size:11px; color:#999999; font-style:normal; line-height:18px; font-weight:bold}
+#all label i {font-size:11px; color:#999999; font-style:normal; line-height:18px; font-weight:bold}
 
 .fline {clear:left; height:48px; margin:0; padding:0; margin-top:35px; border:0;  margin-bottom:1px; overflow:hidden; border:0}
 .fline1 {clear:left; height:16px; margin:0; padding:0; margin-top:30px; border:0;  margin-bottom:1px; overflow:hidden}
@@ -93,7 +78,7 @@ margin-left:145px;
    margin-top: 0px;
    margin-bottom: 0px;
 }
-input[type="text"],input[type="password"] {
+#QIWIMobilePhone, #all input[type="text"], #all input[type="password"] {
    width:240px;
    height:27px;
    font-size:12px;
@@ -153,7 +138,7 @@ input[type="text"],input[type="password"] {
 #CVC2.valid, #CVC2:focus{color:#333333}
 #CardNumber.valid, #CardNumber:focus {background:#fff}
 #ExpireMonth {margin-right:11px}
-select {width:69px; height:27px; font-size:12px; text-indent:2px; border:1px solid #c0c0c0; margin-right:7px;}
+#all select {width:69px; height:27px; font-size:12px; text-indent:2px; border:1px solid #c0c0c0; margin-right:7px;}
 
 #CBLeft {border:0; width:250px; height:600px; font-size:12px; line-height:16px; color:#333333; float:left; margin:0; margin-left:35px}
 #CBLeft img {display:block; margin-bottom:10px;}
@@ -193,13 +178,12 @@ p.AboutAssist {line-height:18px; margin-bottom:20px;}
 .HHTitle h1{font-size:32px}
 .HHLeft {border:0; display:block; float:left; width:818px; margin-left:90px; clear:left}
 #all.HHOrder {height:188px !important; min-height:188px; border:0}
-#all.HHOrder #OrderInfo {margin-top:35px; margin-left:2px}
 p.CBLeftP {display:block; font-size:12px; line-height:16px; margin-bottom:22px}
 #CBLeft.CBLeftRight {margin-left:35px; border:0; width:250px}
 
 /* end QIWI */
 
-input[type="radio"]{
+#all input[type="radio"]{
    width:16px; height:20px;
    margin-right:10px;
    border:0;
@@ -334,7 +318,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#88c300', end
 .button_remove{
    background-image: url(/template/custom/reseller_1/986142/img/button_remove.png);
 }
-select{
+#all select{
    background: #fff;
    width: 109px;
    padding-top: 1px;
@@ -350,7 +334,7 @@ select{
    color:#58595b;
    font-weight:normal;
 }
-select:focus {border:1px solid #333333}
+#all select:focus {border:1px solid #333333}
 
 input.valid {border: 1px solid #c0c0c0; color:#000}
 input.error {color:#000}
@@ -423,8 +407,8 @@ input.MakeMain {width:auto !important; height:auto !important; padding:0; backgr
     margin-top: -185px;
 }
 
-#loading {display:block; width:1150px; height:635px; border:0; position:absolute; top:0; left:0; z-index:1000; background:#fff; padding:0}
-#loading  div {font-size:16px; display:block; float:left; margin-top:250px; width:1150px; height:470px; border:0; text-align:center; background:#fff}
+#loading {display:block; border:0; background:#fff; padding:0}
+#loading  div {font-size:16px; height:470px; border:0; text-align:center; background:#fff}
 
    .whitefon {border:0; margin-top:0; margin-left:70px; line-height:18px; font-size:14px; margin-top:-16px}
    .errormess {border:0; height:40px; width:400px}
@@ -484,7 +468,7 @@ input.MakeMain {width:auto !important; height:auto !important; padding:0; backgr
 .checkbox:focus + label:before {
 }
 
-input[type='reset'] {
+#all input[type='reset'] {
 	padding: 12px 15px;
 	border: none;
 	border-radius: 5px;
@@ -493,10 +477,10 @@ input[type='reset'] {
 	cursor: pointer;
 	font-size: 15px;
 }
-input[type='reset']:active {
+#all input[type='reset']:active {
 	background: #BDC0CC;
 }
-input[type='reset']:focus {
+#all input[type='reset']:focus {
 	outline: none;
 	box-shadow: 0 0 0 3px rgba(255,255,0,.5);
 }

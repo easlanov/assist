@@ -1,82 +1,176 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
-	<title><%=MERCHANTNAME%> - Оплата заказа № <%=ORDERNUMBER%></title>
-	<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
-	<meta http-equiv=Expires content="Mon, 06 Jan 1990 00:00:01 GMT">
-	<link rel="stylesheet" type="text/css" href="/template/custom/reseller_1/986142/styles/hh_card.css?=12_11_2014">
-	<script src="/template/custom/reseller_1/986142/scripts/jquery-1.11.0.min.js"></script>
-	<script src="/template/custom/reseller_1/986142/scripts/jquery.maskedinput-1.3.1.js"></script>
-	<script type="text/javascript" src="/template/custom/reseller_1/986142/scripts/jquery.validate.js"></script>
+  <head>
+    <title><%=MERCHANTNAME%> - Оплата заказа № <%=ORDERNUMBER%></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT" />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="/template/custom/reseller_1/986142/styles/style.css"
+    />
+    <script src="/template/custom/reseller_1/986142/scripts/jquery-1.11.0.min.js"></script>
+    <script src="/template/custom/reseller_1/986142/scripts/jquery.maskedinput-1.3.1.js"></script>
+    <script
+      type="text/javascript"
+      src="/template/custom/reseller_1/986142/scripts/jquery.validate.js"
+    ></script>
     <script src="/template/custom/reseller_1/986142/scripts/size.js"></script>
     <script>
-		$(function() {
-			$('#SafetyMoreT').click(function(event) {
-				$('#SafetyMore').slideToggle();
-			});
-		});
+      $(function () {
+        $("#SafetyMoreT").click(function (event) {
+          $("#SafetyMore").slideToggle();
+        });
+      });
     </script>
-	<style>
-	label.error {margin-left:295px}
-	</style>
-</head>
-<body>
-<%=scripts%>
+    <style>
+      label.error {
+        margin-left: 295px;
+      }
+    </style>
+  </head>
+  <body>
+    <%=scripts%>
+    <div class="light-page">
+      <div class="bloko-columns-wrapper">
+        <div
+          class="bloko-column bloko-column_xs-4 bloko-column_s-2 bloko-column_m-2 bloko-column_l-4"
+        >
+          <div
+            class="bloko-gap bloko-gap_s-top bloko-gap_m-top bloko-gap_l-top"
+          >
+            <div class="light-page-header">
+              <a class="light-page-header__logo" href="/">
+                <span class="light-page-header__img">
+                  <span class="supernova-logo supernova-logo_hh-ru"></span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
 
-<div class='HHLogo'><a href='http://hh.ru'><img src="/template/custom/reseller_1/986142/img/hh.logo.png" alt="" /></a></div>
-<div class='HHTitle'><h1>Оформление покупки</h1></div>
+        <div
+          class="bloko-column bloko-column_xs-4 bloko-column_s-8 bloko-column_m-12 bloko-column_l-16"
+        >
+          <div class="bloko-gap bloko-gap_top">
+            <h1 class="bloko-header-1">Оформление покупки</h1>
+          </div>
+          <ul class="payment-path">
+            <li class="payment-path__item payment-path__item_done">
+              <span class="payment-path__item-text">Моя корзина</span>
+            </li>
+            <li class="payment-path__item payment-path__item_done">
+              <span class="payment-path__item-text">Способ оплаты</span>
+            </li>
+            <li class="payment-path__item payment-path__item_current">
+              <span class="payment-path__item-text">Оплата</span>
+            </li>
+          </ul>
+        </div>
 
-<div class='HHLeft'>
-	<div id="all" class='HHOrder'>
-		<div id="OrderInfo">Оплата заказа №<%=ORDERNUMBER%> в системе электронных платежей</div>
+        <div
+          class="bloko-column bloko-column_xs-4 bloko-column_s-8 bloko-column_m-12 bloko-column_l-16 bloko-column_container"
+        >
+          <form method="post" name="form1" id="form1">
+            <div style="border: 0; display: block; float: left; width: 818px">
+              <div id="all" class="HHOrder">
+                <div id="OrderInfo">
+                  Оплата заказа №<%=ORDERNUMBER%> в системе электронных платежей
+                </div>
+                <div class="OtherInfo" style="margin-top: 35px">
+                  <label
+                    style="
+                      width: 180px;
+                      font-weight: normal;
+                      font-size: 14px;
+                      line-height: 24px;
+                      margin-left: 0;
+                    "
+                  >
+                    Мобильный телефон
+                  </label>
+                  <%=CountryPhoneCode%><%=QIWIMobilePhone%>
+                </div>
+              </div>
+              <div id="Bottom">
+                <div class="errormess">
+                  <%=ErrorMessageInfo%> <%=recurrentinfo%>
+                </div>
+                <div class="Total">К оплате: <%=AMOUNTORG%> руб.</div>
+                <div class="button_block">
+                  <input
+                    type="submit"
+                    id="button_pay 3_1"
+                    class="button_pay"
+                    name="Submit_Card_1"
+                    value="Подтвердить"
+                  />
+                </div>
+              </div>
+            </div>
+          </form>
 
+          <div id="CBLeft" class="CBLeftRight">
+            <img
+              src="/template/custom/reseller_1/986142/img/assistlogo.jpg"
+              alt=""
+              width="97"
+              height="24"
+              style="margin-bottom: 12px"
+            />
+            <p class="CBLeftP">
+              Ваш платеж обрабатывается<br />системой электронных платежей<br />ASSIST
+            </p>
 
-	<form method="post" name="form1" id="form1">
-	<div class="OtherInfo" style="margin-top:35px">
-		<label style="width:180px; font-weight:normal; font-size:14px; line-height:24px; margin-left:0">Мобильный телефон </label> <%=CountryPhoneCode%><%=QIWIMobilePhone%>
-	</div>
-
-	</div>
-
-	<div id="Bottom">
-	<div class='errormess'>
-		<%=ErrorMessageInfo%>
-		<%=recurrentinfo%>
-	</div>
-	<div class="Total">К оплате: <%=AMOUNTORG%> руб.</div>
-	<div class="button_block">
-	<input type="submit" id="button_pay 3_1" class="button_pay" name="Submit_Card_1" value="Подтвердить" />
-
-
-	</div>
-	</div>
-
-
-	</div>
-
-	</form>
-
-		<div id="CBLeft" class='CBLeftRight'>
-		<img src="/template/custom/reseller_1/986142/img/assistlogo.jpg" alt="" width="97" height="24" style='margin-bottom:12px' />
-		<p class='CBLeftP'>Ваш платеж обрабатывается<br>системой электронных платежей<br>ASSIST</p>
-
-		<img src="/template/custom/reseller_1/986142/img/qiwi_mts_megafon_opacity50.png"  alt="" style="margin-bottom:30px; float:left; clear:left">
-		<span id="SafetyMoreT" class="dotted"><i>Подробнее про оплату QIWI</i></span>
-		<div id="SafetyMore" style="display:none; font-size:11px; line-height:16px; padding-top:12px">
-		Безопасность платежей обеспечивается использованием SSL протокола для передачи конфиденциальной информации от клиента на сервер системы ASSIST для дальнейшей обработки.
-<br>
-Дальнейшая передача информации осуществляется по закрытым банковским сетям высшей степени защиты.
-<br>
-Обработка полученных конфиденциальных данных клиента (реквизиты карты, регистрационные данные и т.д.) производится в процессинговом центре.
-Таким образом, никто, даже продавец, не может получить персональные и банковские данные клиента, включая информацию о его покупках, сделанных в других магазинах.
-<br><br>
-<b>Безопасность передаваемой информации</b><br>
-Для защиты информации от несанкционированного доступа на этапе передачи от клиента на сервер системы ASSIST используется протокол SSL 3.0, сертификат сервера (128 bit) выдан компанией Thawte - признанным центром выдачи цифровых сертификатов.
-Вы можете проверить подлинность сертификата сервера.
-
-		</div>
-		</div>
-
-
-</body>
+            <img
+              src="/template/custom/reseller_1/986142/img/qiwi_mts_megafon_opacity50.png"
+              alt=""
+              style="margin-bottom: 30px"
+            />
+            <span id="SafetyMoreT" class="dotted"
+              ><i>Подробнее про оплату QIWI</i></span
+            >
+            <div
+              id="SafetyMore"
+              style="
+                display: none;
+                font-size: 11px;
+                line-height: 16px;
+                padding-top: 12px;
+              "
+            >
+              Безопасность платежей обеспечивается использованием SSL протокола
+              для передачи конфиденциальной информации от клиента на сервер
+              системы ASSIST для дальнейшей обработки.
+              <br />
+              Дальнейшая передача информации осуществляется по закрытым
+              банковским сетям высшей степени защиты.
+              <br />
+              Обработка полученных конфиденциальных данных клиента (реквизиты
+              карты, регистрационные данные и т.д.) производится в
+              процессинговом центре. Таким образом, никто, даже продавец, не
+              может получить персональные и банковские данные клиента, включая
+              информацию о его покупках, сделанных в других магазинах.
+              <br /><br />
+              <b>Безопасность передаваемой информации</b><br />
+              Для защиты информации от несанкционированного доступа на этапе
+              передачи от клиента на сервер системы ASSIST используется протокол
+              SSL 3.0, сертификат сервера (128 bit) выдан компанией Thawte -
+              признанным центром выдачи цифровых сертификатов. Вы можете
+              проверить подлинность сертификата сервера.
+            </div>
+          </div>
+        </div>
+        <div
+          class="bloko-column bloko-column_xs-4 bloko-column_s-8 bloko-column_m-12 bloko-column_l-16"
+        >
+          <div class="light-page-footer">
+            <div class="light-page-footer__copyright" data-qa="copyright">
+              © 2020 Группа компаний HeadHunter
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
