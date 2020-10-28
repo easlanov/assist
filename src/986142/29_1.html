@@ -1,89 +1,157 @@
-﻿<HTML>
-	<HEAD>
-		<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-			<TITLE><%=MERCHANTNAME%> - Оплата заказа № <%=ORDERNUMBER%></TITLE>
-			<META CONTENT="Mon, 06 Jan 1990 00:00:01 GMT" HTTP-EQUIV="Expires">
-				<LINK rel="stylesheet" type="text/css" href="/template/custom/reseller_1/986142/styles/hh_card.css?=12_11_2014">
-				<script src="/template/custom/reseller_1/986142/scripts/jquery-1.11.0.min.js"></script>
-                <script src="/template/custom/reseller_1/986142/scripts/size.js"></script>
-				</HEAD>
+﻿<!DOCTYPE html>
+<html>
+  <head>
+	<title><%=MERCHANTNAME%> - Оплата заказа № <%=ORDERNUMBER%></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />    
+    <meta content="Mon, 06 Jan 1990 00:00:01 GMT" http-equiv="Expires" />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="/template/custom/reseller_1/986142/styles/style.css"
+    />
+    <script src="/template/custom/reseller_1/986142/scripts/jquery-1.11.0.min.js"></script>
+    <script src="/template/custom/reseller_1/986142/scripts/size.js"></script>
+    <script type="text/javascript">
+      function gotoissue() {
+        document.getElementById("3DS").submit();
+      }
 
-				<script type="text/javascript">
-					<!--
-					function gotoissue(){
-						document.getElementById('3DS').submit();
-					}
+      function FDelay() {
+        setTimeout("gotoissue()", 3000);
+      }
+    </script>
+  </head>
+  <body onLoad="FDelay();">
+    <%=scripts%>
+    <div class="light-page">
+      <div class="bloko-columns-wrapper">
+        <div
+          class="bloko-column bloko-column_xs-4 bloko-column_s-2 bloko-column_m-2 bloko-column_l-4"
+        >
+          <div
+            class="bloko-gap bloko-gap_s-top bloko-gap_m-top bloko-gap_l-top"
+          >
+            <div class="light-page-header">
+              <a class="light-page-header__logo" href="/">
+                <span class="light-page-header__img">
+                  <span class="supernova-logo supernova-logo_hh-ru"></span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bloko-column bloko-column_xs-4 bloko-column_s-8 bloko-column_m-12 bloko-column_l-16"
+        >
+          <div class="bloko-gap bloko-gap_top">
+            <h1 class="bloko-header-1">Оформление покупки</h1>
+          </div>
+          <ul class="payment-path">
+            <li class="payment-path__item payment-path__item_done">
+              <span class="payment-path__item-text">Моя корзина</span>
+            </li>
+            <li class="payment-path__item payment-path__item_done">
+              <span class="payment-path__item-text">Способ оплаты</span>
+            </li>
+            <li class="payment-path__item payment-path__item_current">
+              <span class="payment-path__item-text">Оплата</span>
+            </li>
+          </ul>
+        </div>
 
-					function FDelay(){
-						setTimeout("gotoissue()", 3000);
-					}
+        <div
+          class="bloko-column bloko-column_xs-4 bloko-column_s-8 bloko-column_m-12 bloko-column_l-16 bloko-column_container"
+        >
+          <div style="border: 0; display: block; float: left; width: 818px">
+            <div id="all">
+              <div id="OrderInfo">
+                Оплата заказа №<%=ORDERNUMBER%> в системе электронных платежей
+              </div>
+              <div class="OtherInfo">
+                Сейчас вы перейдёте на страницу вашего банка для ввода
+                секретного пароля.<br />
+                Если этого не произошло в течение 3-х секунд, нажмите на кнопку
+                "Продолжить". <%=TData%>
+              </div>
+            </div>
+            <div id="Bottom">
+              <%=ErrorMessageInfo%> <%=recurrentinfo%>
+              <div class="Total">К оплате: <%=AMOUNTORG%> руб.</div>
+              <div class="button_block">
+                <input
+                  type="submit"
+                  id="button_pay 3_1"
+                  class="button_pay"
+                  name="Submit_Card_1"
+                  value="Продолжить"
+                />
+              </div>
+            </div>
+          </div>
+          <div id="CBLeft">
+            <img
+              src="/template/custom/reseller_1/986142/img/Visa_mastercard_secure_opacity50.png"
+              alt=""
+            />
+            <p class="AboutAssist">
+              Сервис предоставлен провайдером электронных платежей ASSIST.
+              Комиссия не взимается. Введенные данные будут храниться в
+              зашифрованном виде.
+            </p>
+            <span id="SafetyMoreT" class="dotted" style="">
+              <i>Подробнее про безопасность платежей</i>
+            </span>
+            <div
+              id="SafetyMore"
+              style="
+                display: none;
+                font-size: 11px;
+                line-height: 16px;
+                padding-top: 12px;
+              "
+            >
+              Оплата услуг пластиковыми картами на нашем сайте осуществляется
+              через платежную систему
+              <a
+                href="http://www.assist.ru"
+                target="_blank"
+                style="display: inline; margin: 0; padding: 0; float: none"
+                >ASSIST</a
+              >. <br />
+              В системе ASSIST безопасность платежей обеспечивается
+              использованием SSL протокола для передачи конфиденциальной
+              информации от клиента на сервер системы ASSIST для дальнейшей
+              обработки.<br />
+              Дальнейшая передача информации осуществляется по закрытым
+              банковским сетям.<br />
+              Обработка полученных конфиденциальных данных клиента (реквизиты
+              карты, регистрационные данные и т.д.) производится в
+              процессинговом центре. Таким образом, никто, даже продавец, не
+              может получить персональные и банковские данные клиента.
+            </div>
+          </div>
+        </div>
 
-		//-->
-	</script>
-	<body onLoad="FDelay();">
-	<%=scripts%>
-
-
-
-	<div style="border:0; display:block; float:left; width:818px;">
-
-	<div id="all">
-
-	<div id="OrderInfo">Оплата заказа №<%=ORDERNUMBER%> в системе электронных платежей</div>
-
-	<div class="OtherInfo">Сейчас вы перейдёте на страницу вашего банка для ввода секретного пароля.<br>
-	Если этого не произошло в течение 3-х секунд, нажмите на кнопку "Продолжить".
-
-			<%=TData%>
-
-	</div>
-
-
-
-	</div>
-
-	<div id="Bottom">
-			<%=ErrorMessageInfo%>
-		<%=recurrentinfo%>
-	<div class="Total">К оплате: <%=AMOUNTORG%> руб.</div>
-	<div class="button_block">
-	<input type="submit" id="button_pay 3_1" class="button_pay" name="Submit_Card_1" value="Продолжить" />
-	</div>
-	</div>
-
-		</form>
-
-	</div>
-
-
-
-		<div id="CBLeft">
-
-		<img src="/template/custom/reseller_1/986142/img/Visa_mastercard_secure_opacity50.png"  alt="">
-		<p class="AboutAssist">Сервис предоставлен провайдером электронных платежей ASSIST. Комиссия не взимается. Введенные данные будут храниться в зашифрованном виде.</p>
-		<span id="SafetyMoreT" class="dotted" style=""><i>Подробнее про безопасность платежей</i></span>
-
-		<div id="SafetyMore" style="display:none; font-size:11px; line-height:16px; padding-top:12px">
-Оплата услуг пластиковыми картами на нашем сайте осуществляется через платежную систему <a href="http://www.assist.ru" target="_blank" style="display:inline; margin:0; padding:0; float:none">ASSIST</a>. <br>
-В системе ASSIST безопасность платежей обеспечивается использованием SSL протокола для передачи конфиденциальной информации от клиента на сервер системы ASSIST для дальнейшей обработки.<br>
-Дальнейшая передача информации осуществляется по закрытым банковским сетям.<br>
-Обработка полученных конфиденциальных данных клиента (реквизиты карты, регистрационные данные и т.д.) производится в процессинговом центре. Таким образом, никто, даже продавец, не может получить персональные
-и банковские данные клиента.
-		</div>
-		</div>
-<script>
-		$(function() {
-
-			$('#SafetyMoreT').click(function(event) {
-				$('#SafetyMore').slideToggle();
-
-			});
-			$('.Title1').click(function(event) {
-				$('#SafetyMore').slideToggle();
-
-			});
-		});
-</script>
-
-	</body>
-</HTML>
+        <div
+          class="bloko-column bloko-column_xs-4 bloko-column_s-8 bloko-column_m-12 bloko-column_l-16"
+        >
+          <div class="light-page-footer">
+            <div class="light-page-footer__copyright" data-qa="copyright">
+              © 2020 Группа компаний HeadHunter
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(function () {
+        $("#SafetyMoreT").click(function (event) {
+          $("#SafetyMore").slideToggle();
+        });
+        $(".Title1").click(function (event) {
+          $("#SafetyMore").slideToggle();
+        });
+      });
+    </script>
+  </body>
+</html>
