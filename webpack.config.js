@@ -54,6 +54,7 @@ const assistHtmlWebpackPluginOptions = (templateName, isMobile = false) => {
       ...data,
       ...commonTemplateData,
     },
+    inject: false,
   };
 };
 

@@ -1,6 +1,6 @@
 /* v. 27.11.2014.1 */
-#all p, #all span, #all label, #all input, #all select {display:block; float:left; margin:0; padding:0;}
-
+#all p, span, #all label, #all input, #all select {display:block; float:left; margin:0; padding:0;}
+.CVC span { line-height: 14px; }
 #all {border:0; background:#f5f4f1; padding:0; width:818px; min-height:480px; display:block; float:left; clear:left}
 #OrderInfo {display:block; border:0; text-indent:18px; font-size:18px; font-weight:bold; margin-top:22px}
 #CardBlock, #CardBlockBack {
@@ -27,7 +27,7 @@
 #all label i {font-size:11px; color:#999999; font-style:normal; line-height:18px; font-weight:bold}
 
 .fline {clear:left; height:48px; margin:0; padding:0; margin-top:35px; border:0;  margin-bottom:1px; overflow:hidden; border:0}
-.fline1 {clear:left; height:16px; margin:0; padding:0; margin-top:30px; border:0;  margin-bottom:1px; overflow:hidden}
+.fline1 {clear:left; height:16px; margin:0; padding:0; margin-top:30px; border:0;  margin-bottom:1px; overflow:hidden; line-height: 14px; font-size: 12px;}
 .fline2 {margin-top:16px;  margin-bottom:1px; overflow:hidden}
 
 .tData {margin-left:25px}
@@ -78,7 +78,7 @@ margin-left:145px;
    margin-top: 0px;
    margin-bottom: 0px;
 }
-#QIWIMobilePhone, #all input[type="text"], #all input[type="password"] {
+#QIWIMobilePhone, #all input[type="text"], input[type="password"] {
    width:240px;
    height:27px;
    font-size:12px;
@@ -353,7 +353,7 @@ input.MakeMain {width:auto !important; height:auto !important; padding:0; backgr
 
 #MyCards {width:255px}
 
-#DelCard {margin-left:120px;}
+#DelCard {margin-left:80px;}
 /*
 #UseCard, #UseCardOne {font-size:12px; text-decoration:none; display:block; float:left; margin-left:20px;  height:12px; margin-top:6px; margin-bottom:12px; color:#336699;}
 */
@@ -587,3 +587,7 @@ button.prosper-button {
          cursor: default;
          opacity: 0.6;
      }
+
+.CVC label {
+   margin: 0 !important;
+}
