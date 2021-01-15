@@ -1,30 +1,26 @@
 ﻿<!DOCTYPE html>
 <html>
-  <head>
-    <title><%=TITLE%>:<%=ORDERNUMBER%></title>
-    <meta http-equiv="CONTENT-TYPE" content="TEXT/HTML; CHARSET=UTF-8" />
-    <meta content="Mon, 06 Jan 1990 00:00:01 GMT" http-equiv="Expires" />
-    <link
-      rel="stylesheet"
-      media="all"
-      href="/template/custom/reseller_1/986142/styles/style.css"
-    />
-    <script src="/template/custom/reseller_1/986142/scripts/jquery-1.8.3.min.js"></script>
-    <script src="/template/custom/reseller_1/986142/scripts/oneclickselect.js"></script>
-    <script src="/template/custom/reseller_1/986142/scripts/jquery.validate.js"></script>
-    <script src="/template/custom/reseller_1/986142/scripts/size.js"></script>
-  </head>
-  <body>
-    <%=scripts%>
+
+<head>
+  <title>
+    <%=TITLE%>:<%=ORDERNUMBER%>
+  </title>
+  <meta http-equiv="CONTENT-TYPE" content="TEXT/HTML; CHARSET=UTF-8" />
+  <meta content="Mon, 06 Jan 1990 00:00:01 GMT" http-equiv="Expires" />
+  <link rel="stylesheet" media="all" href="/template/custom/reseller_1/986142/styles/style.css" />
+  <script src="/template/custom/reseller_1/986142/scripts/jquery-1.8.3.min.js"></script>
+  <script src="/template/custom/reseller_1/986142/scripts/oneclickselect.js"></script>
+  <script src="/template/custom/reseller_1/986142/scripts/jquery.validate.js"></script>
+  <script src="/template/custom/reseller_1/986142/scripts/size.js"></script>
+</head>
+
+<body>
+  <%=scripts%>
 
     <div class="light-page">
       <div class="bloko-columns-wrapper">
-        <div
-          class="bloko-column bloko-column_xs-4 bloko-column_s-2 bloko-column_m-2 bloko-column_l-4"
-        >
-          <div
-            class="bloko-gap bloko-gap_s-top bloko-gap_m-top bloko-gap_l-top"
-          >
+        <div class="bloko-column bloko-column_xs-4 bloko-column_s-2 bloko-column_m-2 bloko-column_l-4">
+          <div class="bloko-gap bloko-gap_s-top bloko-gap_m-top bloko-gap_l-top">
             <div class="light-page-header">
               <a class="light-page-header__logo" href="//hh.ru">
                 <span class="light-page-header__img">
@@ -34,9 +30,7 @@
             </div>
           </div>
         </div>
-        <div
-          class="bloko-column bloko-column_xs-4 bloko-column_s-8 bloko-column_m-12 bloko-column_l-16"
-        >
+        <div class="bloko-column bloko-column_xs-4 bloko-column_s-8 bloko-column_m-12 bloko-column_l-16">
           <div class="bloko-gap bloko-gap_top">
             <h1 class="bloko-header-1">Оформление покупки</h1>
           </div>
@@ -54,17 +48,14 @@
         </div>
 
         <div
-          class="bloko-column bloko-column_xs-4 bloko-column_s-8 bloko-column_m-12 bloko-column_l-16 bloko-column_container"
-        >
+          class="bloko-column bloko-column_xs-4 bloko-column_s-8 bloko-column_m-12 bloko-column_l-11 bloko-column_container">
           <form method="post" name="form1" id="form1">
-            <div
-              style="
+            <div style="
                 border: 0px solid blue;
                 display: block;
                 float: left;
                 width: 818px;
-              "
-            >
+              ">
               <div id="all">
                 <div id="OrderInfo">
                   Оплата заказа №<%=ORDERNUMBER%> в системе электронных платежей
@@ -88,9 +79,7 @@
                   </div>
                   <div class="LinkBlock">
                     <a href="#" id="UseCard">Оплатить другой картой</a>
-                    <a href="#" id="DelCard" onclick="onCardsDelete();"
-                      >Удалить эту карту</a
-                    >
+                    <a href="#" id="DelCard" onclick="onCardsDelete();">Удалить эту карту</a>
                   </div>
                 </div>
                 <div id="empDataU"></div>
@@ -99,86 +88,113 @@
                   <div class="MagLine"></div>
                   <div class="fline CVC">
                     <label>CVV / CVC</label>
-                    <input
-                      type="password"
-                      id="CVC2"
-                      name="ACTIONPARAM_ID_18"
-                      autocomplete="off"
-                    />
+                    <input type="password" id="CVC2" name="ACTIONPARAM_ID_18" autocomplete="off" />
                     <span>Последние три цифры<br />на полосе для подписи</span>
-                    <%=captcha_code%><%=CaptchaCodeIMG%><%=CaptchaCode%>
+                    <%=captcha_code%>
+                      <%=CaptchaCodeIMG%>
+                        <%=CaptchaCode%>
                   </div>
                 </div>
-                <input
-                  type="hidden"
-                  id="Operation_ID"
-                  value="<%=OPERATIONID%>"
-                />
+                <input type="hidden" id="Operation_ID" value="<%=OPERATIONID%>" />
               </div>
               <div id="Bottom">
                 <div class="errormess">
-                  <%=ErrorMessageInfo%> <%=recurrentinfo%>
+                  <%=ErrorMessageInfo%>
+                    <%=recurrentinfo%>
                 </div>
                 <div class="Total">К оплате: <%=AMOUNTORG%> руб.</div>
                 <div class="button_block">
-                  <input
-                    type="submit"
-                    id="button_pay 3_1"
-                    class="button_pay"
-                    name="Submit_Card_2"
-                    value="Оплатить"
-                  />
+                  <input type="submit" id="button_pay 3_1" class="button_pay" name="Submit_Card_2" value="Оплатить" />
                 </div>
               </div>
             </div>
           </form>
-
-          <div id="CBLeft">
-            <img
-              src="/template/custom/reseller_1/986142/img/Visa_mastercard_secure_opacity50.png"
-              alt=""
-            />
+        </div>
+        <div
+          class="bloko-column bloko-column_xs-4 bloko-column_s-8 bloko-column_m-12 bloko-column_l-4 bloko-column_container">
+          <div class="left-side">
+            <img class="left-side__img-security"
+              src="/template/custom/reseller_1/986142/img/Visa_mastercard_secure_opacity50.png" alt="" />
             <p class="AboutAssist">
               Сервис предоставлен провайдером электронных платежей ASSIST.
               Комиссия не взимается. Введенные данные будут храниться в
               зашифрованном виде.
             </p>
+
+            <span id="RefundMoreT" class="dotted">
+              <i>О политике возвратов</i>
+            </span>
+            <div id="RefundMore" style="
+              display: none;
+              font-size: 11px;
+              line-height: 16px;
+              clear: both;
+            ">
+              Внимание! Уважаемые клиенты, информируем Вас о том, что при запросе возврата денежных средств при отказе
+              от покупки,
+              возврат производится исключительно на ту же банковскую карту, с которой была произведена оплата!
+            </div>
             <span id="SafetyMoreT" class="dotted">
               <i>Подробнее про безопасность платежей</i>
             </span>
-            <div
-              id="SafetyMore"
-              style="
-                display: none;
-                font-size: 11px;
-                line-height: 16px;
-                clear: both;
-              "
-            >
-              Оплата услуг пластиковыми картами на нашем сайте осуществляется
-              через платежную систему
-              <a
-                href="http://www.assist.ru"
-                target="_blank"
-                style="display: inline; margin: 0; padding: 0; float: none"
-                >ASSIST</a
-              >. <br />
-              В системе ASSIST безопасность платежей обеспечивается
-              использованием SSL протокола для передачи конфиденциальной
-              информации от клиента на сервер системы ASSIST для дальнейшей
-              обработки.<br />
-              Дальнейшая передача информации осуществляется по закрытым
-              банковским сетям.<br />
-              Обработка полученных конфиденциальных данных клиента (реквизиты
-              карты, регистрационные данные и т.д.) производится в
-              процессинговом центре. Таким образом, никто, даже продавец, не
-              может получить персональные и банковские данные клиента.
+            <div id="SafetyMore" style="
+              display: none;
+              font-size: 11px;
+              line-height: 16px;
+              clear: both;
+            ">
+              При оплате заказа банковской картой, обработка платежа (включая ввод номера карты) происходит на
+              защищенной
+              странице процессинговой системы, которая прошла международную сертификацию.
+              Это значит, что Ваши конфиденциальные данные (реквизиты карты, регистрационные данные и др.) не поступают
+              в интернет-магазин,
+              их обработка полностью защищена и никто, в том числе наш интернет-магазин, не может получить персональные
+              и банковские данные клиента.
+
+              При работе с карточными данными применяется стандарт защиты информации, разработанный международными
+              платёжными системами
+              Visa и Mastercard - Payment Card Industry Data Security Standard (PCI DSS), что обеспечивает безопасную
+              обработку
+              реквизитов Банковской карты Держателя.
+              Применяемая технология передачи данных гарантирует безопасность по сделкам с Банковскими картами путем
+              использования
+              протоколов Transport Layer Security (TLS), Visa Secure, Secure Code, и закрытых банковских сетей,
+              имеющих высшую степень защиты.
+              В случае возврата, денежные средства возвращаются на ту же карту, с которой производилась оплата.
             </div>
+
+            <span id="OperatorsMoreT" class="dotted">
+              <i>Об операторах перевода</i>
+            </span>
+            <div id="OperatorsMore" style="
+              display: none;
+              font-size: 11px;
+              line-height: 16px;
+              clear: both;
+            ">
+              <div style="margin-bottom: 10px;">Операторы по переводу денежных средств:</div>
+              <ul>
+                <li>
+                  ПАО ВТБ БАНК (ИНН 7702070139). Генеральная лицензия Банка России №1000 от от 08.07.2015.
+                </li>
+                <li>
+                  АО "Банк Русский Стандарт" (ИНН 7707056547). Генеральная лицензия Банка России № 2289 от 19.11.2014.
+                </li>
+                <li>
+                  ПАО РОСБАНК (ИНН 7730060164), тел. 8 800 200 5434. Генеральная лицензия Банка России №2272 от
+                  28.01.2015.
+                  Платежный агрегатор (банковский платежный агент) оператора - АО "КОКК" (ИНН 7710060991), тел. 8 800
+                  250 3556 на основании
+                  Соглашения от 29.12.2007 и Дополнительного соглашения от 31.12.2019
+                </li>
+              </ul>
+            </div>
+
+
+
           </div>
         </div>
-        <div
-          class="bloko-column bloko-column_xs-4 bloko-column_s-8 bloko-column_m-12 bloko-column_l-16"
-        >
+        <div class="bloko-column bloko-column_xs-4 bloko-column_s-8 bloko-column_m-12 bloko-column_l-16">
           <div class="light-page-footer">
             <div class="light-page-footer__copyright" data-qa="copyright">
               © 2020 Группа компаний HeadHunter
@@ -192,6 +208,12 @@
       $(function () {
         $("#SafetyMoreT").click(function (event) {
           $("#SafetyMore").slideToggle();
+        });
+        $("#RefundMoreT").click(function (event) {
+          $("#RefundMore").slideToggle();
+        });
+        $("#OperatorsMoreT").click(function (event) {
+          $("#OperatorsMore").slideToggle();
         });
       });
 
@@ -209,5 +231,6 @@
         });
       });
     </script>
-  </body>
+</body>
+
 </html>

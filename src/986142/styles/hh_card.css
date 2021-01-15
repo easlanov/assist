@@ -1,7 +1,7 @@
 /* v. 27.11.2014.1 */
 #all p, span, #all label, #all input, #all select {display:block; float:left; margin:0; padding:0;}
 .CVC span { line-height: 14px; }
-#all {border:0; background:#f5f4f1; padding:0; width:818px; min-height:480px; display:block; float:left; clear:left}
+#all {border:0; background:#f5f4f1; padding:0; width:880px; min-height:480px; display:block; float:left; clear:left}
 #OrderInfo {display:block; border:0; text-indent:18px; font-size:18px; font-weight:bold; margin-top:22px}
 #CardBlock, #CardBlockBack {
    border:2px solid #70b200; width:420px; height:260px; border-radius:12px;
@@ -141,22 +141,25 @@ margin-left:145px;
 #all select {width:69px; height:27px; font-size:12px; text-indent:2px; border:1px solid #c0c0c0; margin-right:7px;}
 
 #CBLeft {border:0; width:250px; height:600px; font-size:12px; line-height:16px; color:#333333; float:left; margin:0; margin-left:35px}
-#CBLeft img {display:block; margin-bottom:10px;}
-#Bottom {width:818px; margin:0; border:0; display:block; float:left; margin-top:35px;}
+.left-side {border:0; width:250px; height:600px; font-size:12px; line-height:16px; color:#333333; margin:0; margin-left:35px}
+#CBLeft img, .left-side img {display:block; margin-bottom:10px;}
+#Bottom {width:880px; margin:0; border:0; display:block; float:left; margin-top:35px;}
 #Bottom .Total {display:block; float:right; clear:right; margin-right:20px; font-size:24px; border-top:1px solid #999; font-weight:bold; padding-top:24px;}
 
 div.LinkBlock a {border:0 !important; text-decoration:none; margin-left:23px; color:#009bd7; font-weight:bold; margin-top:23px; display:block; float:left}
 
-#SafetyMoreT {margin-bottom:13px;}
-#CBLeft span,  #CBLeft a {
+#SafetyMoreT, #RefundMoreT, #SafetyMore, #RefundMore, #OperatorsMore, #OperatorsMoreT {margin-bottom:13px;}
+#CBLeft span,  #CBLeft a,
+.left-side span, .left-side a {
 	text-decoration: none;
 	color:#009bd7; font-weight:bold;
 }
-#CBLeft span.dotted, #CBLeft a.dotted {
+#CBLeft span.dotted, #CBLeft a.dotted,
+.left-side span.dotted, .left-side a.dotted {
 	cursor:pointer;
 }
 
-#CBLeft span.dotted i {text-decoration:none; font-style: normal;
+#CBLeft span.dotted i, .left-side span.dotted i {text-decoration:none; font-style: normal;
     background: -moz-linear-gradient(left, #009bd7, #009bd7 50%, transparent 50%);
     background: -ms-linear-gradient(left, #009bd7, #009bd7 50%, transparent 50%);
     background: -o-linear-gradient(left, #009bd7, #009bd7 50%, transparent 50%);
@@ -176,10 +179,10 @@ p.AboutAssist {line-height:18px; margin-bottom:20px;}
 .HHLogo img {border:0}
 .HHTitle {margin-left:90px; display:block; float:left; width:1104px; height:90px; text-indent:18px; clear:left}
 .HHTitle h1{font-size:32px}
-.HHLeft {border:0; display:block; float:left; width:818px; margin-left:90px; clear:left}
+.HHLeft {border:0; display:block; float:left; width:880px; margin-left:90px; clear:left}
 #all.HHOrder {height:188px !important; min-height:188px; border:0}
 p.CBLeftP {display:block; font-size:12px; line-height:16px; margin-bottom:22px}
-#CBLeft.CBLeftRight {margin-left:35px; border:0; width:250px}
+#CBLeft.CBLeftRight, #left-side.CBLeftRight {margin-left:35px; border:0; width:250px}
 
 /* end QIWI */
 
@@ -274,7 +277,7 @@ font-size:14px;
 #empData1 .smalltext { font-size: 13px; margin:35px; margin-top:0; line-height: 17px;}
 #empData1 .fline {height:20px}
 
-.button_block {display:block; float:left; width:798px; margin-top:28px; margin-right:0px;}
+.button_block {display:block; float:left; width:860px; margin-top:28px; margin-right:0px;}
 .button_pay.disabled {
 background: #d8f19f; /* Old browsers */
 background: -moz-linear-gradient(top,  #d8f19f 0%, #c5e99f 100%); /* FF3.6+ */
@@ -590,4 +593,8 @@ button.prosper-button {
 
 .CVC label {
    margin: 0 !important;
+}
+
+.left-side__img-security {
+   width: 250px;
 }
