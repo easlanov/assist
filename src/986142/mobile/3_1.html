@@ -10,6 +10,8 @@
 	<script type="text/javascript" src="/template/custom/reseller_1/986142/mobile/scripts/jquery.maskedinput-1.1.3.js"></script>
 	<script type="text/javascript" src="/template/custom/reseller_1/986142/mobile/scripts/jquery.validate.js"></script>
     <script type="text/javascript" src="/template/custom/reseller_1/986142/mobile/scripts/size.js"></script>
+	<script src="/template/scripts/pc_pg_web_sdk.js"></script>
+	<script src="/template/scripts/pc_gsmpi_web_sdk.js"></script>
 <script type="text/javascript">
 jQuery.validator.setDefaults({
 	debug:false,
@@ -78,6 +80,11 @@ $(document).ready(function(){
 								Номер заказа:  <%=ORDERNUMBER%><br>
 								Сумма платежа: <%=AMOUNTORG%> <%=CURRENCYORG%>
 								</span>
+				</div>
+				<div class="Info3 buttonBlock">
+					<div class="APB_cont"><%SAMSUNGPAYBUTTON%></div>
+					<div class="APB_cont"><%ANDROIDPAYBUTTON%></div>
+					<div class="APB_cont"><%APPLEPAYBUTTON%></div>
 				</div>
 				<div class="Info3">
 				<img src="/template/custom/reseller_1/986142/mobile/img/card.png" align="left" width="80">

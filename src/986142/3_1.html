@@ -15,6 +15,8 @@
   <script src="/template/custom/reseller_1/986142/scripts/paybycard.js"></script>
   <script src="/template/custom/reseller_1/986142/scripts/scripts.js"></script>
   <script src="/template/custom/reseller_1/986142/scripts/size.js"></script>
+  <script src="/template/scripts/pc_pg_web_sdk.js"></script>
+  <script src="/template/scripts/pc_gsmpi_web_sdk.js"></script>
   <%=afsscripts%>
 </head>
 
@@ -56,6 +58,11 @@
               <div id="all">
                 <div id="OrderInfo">
                   Оплата заказа №<%=ORDERNUMBER%> в системе электронных платежей
+                </div>
+                <div class="pay-buttons">
+                  <%=ANDROIDPAYBUTTON%>
+                  <div id="SPpaybutton"></div>
+                  <%=APPLEPAYBUTTON%>
                 </div>
                 <div id="CardBlock">
                   <div class="fline">

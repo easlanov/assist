@@ -24,7 +24,9 @@
 		"OPERATIONID": "",
 		"ErrorMessageInfo": "",
 		"recurrentinfo": "",
-		"AMOUNTORG": "2 568"
+		"AMOUNTORG": "2 568",
+		"ANDROIDPAYBUTTON": "<div id=\"ANpaybutton\">\n                      <div>\n                        <button type=\"button\" aria-label=\"Google Pay\" class=\"gpay-card-info-container black long en\">\n                          <div class=\"gpay-card-info-animation-container black gpay-card-info-animation-container-fade-out\">\n                            <div class=\"gpay-card-info-placeholder-container\">\n                              <div class=\"gpay-card-info-animation-gpay-logo black\"></div>\n                              <svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" direction=\"ltr\" height=\"36px\" width=\"130px\"><style>@import url(//fonts.googleapis.com/css?family=Google+Sans:500)</style><line x1=\"2\" y1=\"10.5\" x2=\"2\" y2=\"29.5\" style=\"stroke: #5F6368; stroke-width:2\"></line><image x=\"11\" y=\"6\" width=\"37.5\" height=\"29\" preserveAspectRatio=\"none\" xlink:href=\"https://www.gstatic.com/images/icons/material/system/1x/payment_white_36dp.png\"></image><text x=\"52\" y=\"25.5\" class=\"small\" style=\"font: 15px 'Google Sans', sans-serif; fill: #FFFFFF\">••••••</text></svg>\n                            </div>\n                            <div class=\"gpay-card-info-animated-progress-bar-container\">\n                              <div class=\"gpay-card-info-animated-progress-bar\">\n                                <div class=\"gpay-card-info-animated-progress-bar-indicator\"></div>\n                              </div>\n                            </div>\n                          </div>\n                          <iframe class=\"gpay-card-info-iframe gpay-card-info-iframe-fade-in\" scrolling=\"no\" src=\"https://pay.google.com/gp/p/generate_gpay_btn_img?buttonColor=black&amp;browserLocale=en&amp;buttonSizeMode=static\"></iframe>\n                        </button>\n                      </div>\n                    </div>",
+		"APPLEPAYBUTTON": ""
 	},
 	"7_1": {
 		"MERCHANTNAME": "HeadHunter",
@@ -122,7 +124,10 @@
 		"EXPIREMONTH": "<select name='ACTIONPARAM_ID_22' id='ExpireMonth'><option value='01'>01</option><option value='02'>02</option><option value='03'>03</option><option value='04'>04</option><option value='05'>05</option><option value='06'>06</option><option value='07'>07</option><option value='08'>08</option><option value='09'>09</option><option value='10'>10</option><option value='11'>11</option><option value='12'>12</option></select>",
 		"EXPIREYEAR": "<select name='ACTIONPARAM_ID_23' id='ExpireYear'><option value='2020' selected='selected'>2020</option><option VALUE='2021'>2021</option><option value='2040'>2040</option></select>",
 		"Cardholder": "<input type='text' id='Cardholder' name='ACTIONPARAM_ID_16' value=''>",
-		"CVC2": "<input type='text' id='CVC2' name='ACTIONPARAM_ID_18' value=''>"
+		"CVC2": "<input type='text' id='CVC2' name='ACTIONPARAM_ID_18' value=''>",
+		"ANDROIDPAYBUTTON": "",
+		"APPLEPAYBUTTON": "",
+		"SAMSUNGPAYBUTTON": ""
 	},
 	"mobile_3_2": {
 		"MERCHANTNAME": "HeadHunter",
