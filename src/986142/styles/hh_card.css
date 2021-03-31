@@ -1,7 +1,7 @@
 /* v. 27.11.2014.1 */
 #all p, span, #all label, #all input, #all select {display:block; float:left; margin:0; padding:0;}
 .CVC span { line-height: 14px; }
-#all {border:0; background:#f5f4f1; padding:0; width:880px; min-height:480px; display:block; float:left; clear:left}
+#all {border:0; background:#f5f4f1; padding:0; width:880px; min-height:540px; display:block; float:left; clear:left}
 #OrderInfo {display:block; border:0; text-indent:18px; font-size:18px; font-weight:bold; margin-top:22px}
 #CardBlock, #CardBlockBack {
    border:2px solid #70b200; width:420px; height:260px; border-radius:12px;
