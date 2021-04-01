@@ -17,6 +17,10 @@
     width: 100%;
 }
 
+#SPpaybutton img {
+    display:none;
+}
+
 #SPpaybutton {
     cursor: pointer;
     border-radius: 4px;
