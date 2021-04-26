@@ -10,13 +10,10 @@ const MERCHANT_ID = 986142;
 const ASSIST_ROOT_PATH = `template/custom/reseller_1/${MERCHANT_ID}`;
 
 const STYLES_PATH = `${ASSIST_ROOT_PATH}/styles/`;
-const STYLES_PATH_MOBILE = `${ASSIST_ROOT_PATH}/mobile/styles/`;
 
 const JS_PATH = `${ASSIST_ROOT_PATH}/scripts/`;
-const JS_PATH_MOBILE = `${ASSIST_ROOT_PATH}/mobile/scripts/`;
 
 const IMAGES_PATH = `${ASSIST_ROOT_PATH}/img/`;
-const IMAGES_PATH_MOBILE = `${ASSIST_ROOT_PATH}/mobile/img/`;
 
 const isDev = process.env.NODE_ENV === "development";
 const isProd = !isDev;
@@ -31,9 +28,9 @@ const commonTemplateData = {
   },
 };
 
-const assistHtmlWebpackPluginOptions = (templateName, isMobile = false) => {
+const assistHtmlWebpackPluginOptions = (templateName) => {
   let data = {};
-  const key = isMobile ? `mobile_${templateName}` : templateName;
+  const key = templateName;
   if (isProd) {
     data = Object.keys(templateData[key]).reduce((result, current) => {
       result[current] = `<%${current}%>`;
@@ -44,12 +41,8 @@ const assistHtmlWebpackPluginOptions = (templateName, isMobile = false) => {
   }
 
   return {
-    filename: isMobile
-      ? `${ASSIST_ROOT_PATH}/mobile/${templateName}.html`
-      : `${ASSIST_ROOT_PATH}/${templateName}.html`,
-    template: isMobile
-      ? `${MERCHANT_ID}/mobile/${templateName}.html`
-      : `${MERCHANT_ID}/${templateName}.html`,
+    filename: `${ASSIST_ROOT_PATH}/${templateName}.html`,
+    template: `${MERCHANT_ID}/${templateName}.html`,
     templateParameters: {
       ...data,
       ...commonTemplateData,
@@ -90,16 +83,6 @@ module.exports = {
     new HTMLWebpackPlugin(assistHtmlWebpackPluginOptions("25_1")),
     new HTMLWebpackPlugin(assistHtmlWebpackPluginOptions("29_1")),
     new HTMLWebpackPlugin(assistHtmlWebpackPluginOptions("76_1")),
-    new HTMLWebpackPlugin(assistHtmlWebpackPluginOptions("1_1", true)),
-    new HTMLWebpackPlugin(assistHtmlWebpackPluginOptions("1_2", true)),
-    new HTMLWebpackPlugin(assistHtmlWebpackPluginOptions("2_1", true)),
-    new HTMLWebpackPlugin(assistHtmlWebpackPluginOptions("2_2", true)),
-    new HTMLWebpackPlugin(assistHtmlWebpackPluginOptions("3_1", true)),
-    new HTMLWebpackPlugin(assistHtmlWebpackPluginOptions("3_2", true)),
-    new HTMLWebpackPlugin(assistHtmlWebpackPluginOptions("25_1", true)),
-    new HTMLWebpackPlugin(assistHtmlWebpackPluginOptions("25_2", true)),
-    new HTMLWebpackPlugin(assistHtmlWebpackPluginOptions("29_1", true)),
-    new HTMLWebpackPlugin(assistHtmlWebpackPluginOptions("29_2", true)),
     new CopyWebpackPlugin({
       patterns: [
         {
@@ -111,20 +94,8 @@ module.exports = {
           to: path.resolve(__dirname, `dist/${JS_PATH}`),
         },
         {
-          from: path.resolve(__dirname, `src/${MERCHANT_ID}/mobile/img`),
-          to: path.resolve(__dirname, `dist/${IMAGES_PATH_MOBILE}`),
-        },
-        {
           from: path.resolve(__dirname, `src/${MERCHANT_ID}/styles`),
           to: path.resolve(__dirname, `dist/${STYLES_PATH}`),
-        },
-        {
-          from: path.resolve(__dirname, `src/${MERCHANT_ID}/mobile/scripts`),
-          to: path.resolve(__dirname, `dist/${JS_PATH_MOBILE}`),
-        },
-        {
-          from: path.resolve(__dirname, `src/${MERCHANT_ID}/mobile/styles`),
-          to: path.resolve(__dirname, `dist/${STYLES_PATH_MOBILE}`),
         },
       ],
     }),
