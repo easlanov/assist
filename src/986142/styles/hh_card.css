@@ -210,6 +210,11 @@ p.CBLeftP {display:block; font-size:12px; line-height:16px; margin-bottom:22px}
 	cursor:pointer;
 }
 
+#empData label {
+    padding-left: 20px;
+    width: auto;
+}
+
 #empData a  {
     background: -moz-linear-gradient(left, #009bd7, #009bd7 50%, transparent 50%);
     background: -ms-linear-gradient(left, #009bd7, #009bd7 50%, transparent 50%);
@@ -226,7 +231,7 @@ p.CBLeftP {display:block; font-size:12px; line-height:16px; margin-bottom:22px}
 	font-style:normal
 }
 
-#OneClickNotice {display:none; width:600px; height:315px; position:absolute; z-index:300; border:1px solid #ccc; background:#fff; border-radius:3px; margin-left:120px; margin-top:132px;
+#OneClickNotice {display:none; width:600px; height:315px; position:absolute; z-index:300; border:1px solid #ccc; background:#fff; border-radius:3px; margin-left:120px; margin-top:220px;
    	-webkit-box-shadow: 2px 2px 10px 0px rgba(50, 50, 50, 0.28);
 	-moz-box-shadow:    2px 2px 10px 0px rgba(50, 50, 50, 0.28);
 	box-shadow:         2px 2px 10px 0px rgba(50, 50, 50, 0.28);
